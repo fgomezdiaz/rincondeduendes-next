@@ -19,12 +19,12 @@ export const CardArticulo = ({articulo}:Props) => {
   
   
     return (
-        <div className="w-full max-w-md  mx-auto border rounded-md flex flex-col max-h-[450px] bg-gradient-to-br from-gray-50 via-gray-100 to-gray-300 " >
+        <div className="w-full max-w-md  mx-auto border rounded-md flex flex-col max-h-[650px] bg-gradient-to-br from-gray-50 via-gray-100 to-gray-300 " >
         <div className="p-0" >
       
               <CldImage
                 id='mainImage'
-                className="object-cover w-full h-48 rounded-t-lg  "
+                className="object-cover h-72 rounded-t-lg  "
                 src={imgSeleccionada || ''}
                 width={1500}
                 height={1000}
@@ -61,17 +61,17 @@ export const CardArticulo = ({articulo}:Props) => {
             <span id="descripcion" className="text-gray-500">{articulo.descripciones[indice]}</span></p>
           <p className="text-xl px-4 pt-2 font-semibold" > 
            Referencia: <span id="referencia" className="text-gray-500">{articulo.referencias[indice]}</span></p>
-          <p className="text-xl px-4 pt-2 font-semibold " >
+          <p className="text-xl px-4 pt-2 font-semibold pb-4 " >
             PVP: <span id="precio" className="text-gray-500">{articulo.precio}</span></p>
         </div>
-        <div className="px-4 py-3 border-t flex items-center justify-center space-x-4">
+        {/* <div className="px-4 py-3 border-t flex items-center justify-center space-x-4">
           <div className="h-5 w-5 text-blue-500 ">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="size-6">
               <path strokeLinecap="round" strokeLinejoin="round" d="M6.75 12a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM12.75 12a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM18.75 12a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
             </svg>
             
           </div>
-        </div>
+        </div> */}
       </div>
   )
 }

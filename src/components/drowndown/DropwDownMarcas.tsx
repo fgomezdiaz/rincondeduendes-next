@@ -20,7 +20,7 @@ export const DrowpDownMarcas = ({marcas}:Props) => {
     setTimeout(() => {setIsOpen(true)}, 500);
   };
   return (
-    <div className='dropdown dropdown-hover'>
+    <div className='dropdown dropdown-hover dropdown-bottom '>
         <button onClick={toggleDropdown} className="flex flex-row m-1 p-1 rounded-md transition-all hover:bg-gray-100 gap-1" >
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
             <path d="M9 5H2v7l6.29 6.29c.94.94 2.48.94 3.42 0l3.58-3.58c.94-.94.94-2.48 0-3.42L9 5Z"/>
@@ -30,7 +30,7 @@ export const DrowpDownMarcas = ({marcas}:Props) => {
           Elegir marca
         </button>
         {isOpen && (
-          <ul tabIndex={0} className="dropdown-content menu bg-base-100 rounded-box z-[1] w-[350px] p-1 shadow grid grid-cols-2 ">
+          <ul tabIndex={0} className="dropdown-content menu bg-base-100 rounded-box z-[1] w-[350px] p-1 shadow grid grid-cols-2">
                 {
                 marcas.map((marca) => (
                     <li className="p-0" key={marca.id}>
