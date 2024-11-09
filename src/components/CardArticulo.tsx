@@ -19,12 +19,12 @@ export const CardArticulo = ({articulo}:Props) => {
   
   
     return (
-        <div className="w-full max-w-md  mx-auto border rounded-md flex flex-col max-h-[650px] bg-gradient-to-br from-gray-50 via-gray-100 to-gray-300 " >
+        <div className="w-full max-w-md  mx-auto border border-gray-500 rounded-md flex flex-col max-h-[650px] bg-gradient-to-br from-gray-50 via-gray-100 to-gray-300 " >
         <div className="p-0" >
       
               <CldImage
                 id='mainImage'
-                className="object-cover h-72 rounded-t-lg  "
+                className="object-cover h-72 rounded-t-lg "
                 src={imgSeleccionada || ''}
                 width={1500}
                 height={1000}

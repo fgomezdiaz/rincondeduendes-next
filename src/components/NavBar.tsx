@@ -33,7 +33,7 @@ export default function NavigationBar() {
   )
 
   return (
-    <nav className="flex px-5 justify-between items-center w-full mt-4">
+    <nav className="flex px-5 justify-between items-center w-full mt-4 ">
       <div>
         <Link href="/">
           <Image src={LOGO} alt="Rincón de Duendes" width={80} height={80} className="object-cover object-center" priority />

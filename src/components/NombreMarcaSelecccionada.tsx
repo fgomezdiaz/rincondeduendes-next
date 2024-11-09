@@ -19,6 +19,8 @@ export const NombreMarcaSelecccionada = () => {
               const id = pathname.split('/').pop()
               const marca = marcas.find(marca => marca.id === id)
               setNombre(`[${marca!.nombre}]` || '')
+            }else{
+              setNombre('')
             }
           }
           fetchNombre()

@@ -11,7 +11,7 @@ interface Props{
 export const CardMarca = ({marca}:Props) => {
 
   return (
-    <div className="w-full max-w-md mx-auto border rounded-md flex flex-col shadow-sm ">
+    <div className="w-full max-w-md mx-auto border rounded-md flex flex-col shadow-sm border-gray-500 ">
         <div className="p-0">
                 <a href={`/juguetes/marca/${marca.id}`}>
                 <CldImage
