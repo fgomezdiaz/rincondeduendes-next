@@ -1,10 +1,15 @@
 'use client'
 
+import { ICategoria } from '@/interfaces/categorias.interface';
 import Link from 'next/link';
 import { useState } from 'react'
+import Image from 'next/image';
 
+interface Props{
+  categorias: ICategoria[]
+}
 
-export const DropwDownCategorias = () => {
+export const DropwDownCategorias = ({categorias}:Props) => {
   const [isOpen, setIsOpen] = useState(true);
 
   // Función para alternar el estado de apertura del dropdown
@@ -25,9 +30,25 @@ export const DropwDownCategorias = () => {
       Elegir categoría
     </button>
         {isOpen && (
-        <ul tabIndex={0} className="dropdown-content menu bg-base-100 rounded-box z-[1] w-[350px] p-1 shadow grid grid-cols-2 ">
-                <li><Link href={'#'} onClick={closeDropdown}>En construcción</Link></li>
-        </ul>)}
+        <ul tabIndex={0} className="dropdown-content menu bg-base-100 rounded-box z-[1] w-[350px] p-1 shadow grid grid-cols-2">
+        {
+        categorias.map((categoria) => (
+            <li className="p-0" key={categoria.id}>
+            <Link href={`/juguetes/categoria/${categoria.nombre}`} onClick={closeDropdown}>
+                <Image
+                    className="object-cover w-full rounded-sm "
+                    src={`/imagenes/avatar/${categoria.avatar}` || ''}
+                    alt={categoria.nombre}
+                    height={30 }
+                    width={30}
+                    loading="lazy"
+                />
+                {categoria.nombre}
+            </Link>
+            </li>
+        ))
+    }
+    </ul>)}
     </div>
   )
 }

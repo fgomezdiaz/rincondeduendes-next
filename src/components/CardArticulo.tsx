@@ -3,6 +3,7 @@ import { IArticulo } from '@/interfaces/articulos.interface'
 import { useState } from 'react';
 import { CldImage } from 'next-cloudinary';
 import clsx from 'clsx';
+import { usePathname } from 'next/navigation';
 
 interface Props{
     articulo: IArticulo
@@ -11,6 +12,7 @@ interface Props{
 export const CardArticulo = ({articulo}:Props) => {
     const [imgSeleccionada, setImgSeleccionada] = useState(articulo.imagenes[0]);
     const [indice, setIndice] = useState(0);
+    const pathname = usePathname();
   
     const onChangeImage = (imagen: string) => {
         setImgSeleccionada(imagen);
@@ -26,7 +28,8 @@ export const CardArticulo = ({articulo}:Props) => {
                 id='mainImage'
                 className="object-cover h-72 rounded-t-lg "
                 src={imgSeleccionada || ''}
-                width={1500}
+                width={1000}
+                crop={'scale'}
                 height={1000}
                 alt={articulo.titulo}
       
@@ -57,6 +60,11 @@ export const CardArticulo = ({articulo}:Props) => {
           </div>
         </div>
         <div>
+          {
+            pathname.includes('categoria') && (
+              <p className="text-xl px-4 pt-2 font-semibold" > 
+                Marca: <span id="categoria" className="text-gray-500">{articulo.nameMarca}</span></p>)
+          }
           <p className="text-xl px-4 pt-2 font-bold border-b-2 pb-2" > 
             <span id="descripcion" className="text-gray-500">{articulo.descripciones[indice]}</span></p>
           <p className="text-xl px-4 pt-2 font-semibold" > 

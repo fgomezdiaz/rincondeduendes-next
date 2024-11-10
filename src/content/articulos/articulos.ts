@@ -8,7 +8,8 @@ export const Articulos: IArticulo[] = [
         descripciones: ["Arcoiris | Madera", "Arcoiris | Pastel", "Arcoiris | Monocromo", "Arcoiris | Natural", "Arcoiris | Bosque verde", "Arcoiris | Prado verde"],
         precio: "78,95 €",
         marca: 'grimm',
-        categoria: [],
+        nameMarca: 'Grimm\'s',
+        categoria: ['Madera', 'Construcciones'],
         referencias: ['10670', '10673', '93050', '10669', '10672', '10671'],
         imagenes:  [
             'grimms/web-grimms/ntiem7ug8zrdjkuev5mb',
@@ -25,7 +26,8 @@ export const Articulos: IArticulo[] = [
         descripciones: ["Tablero | Arcoiris", "Tablero | Pastel", "Tablero | Natural"],
         precio: "48,95 €",
         marca: 'grimm',
-        categoria: [],
+        nameMarca: 'Grimm\'s',
+        categoria: ['Madera', 'Construcciones'],
         referencias: ['10668', '10667', '10666'],
         imagenes:  [
             'grimms/web-grimms/kdbeais6dtd8soiqoeru',
@@ -39,7 +41,8 @@ export const Articulos: IArticulo[] = [
         descripciones: ["Tangram | Rosa-Naranja", "Tangram | Turquesa"],
         precio: "25,90 €",
         marca: 'grimm',
-        categoria: [],
+        nameMarca: 'Grimm\'s',
+        categoria: ['Madera', 'Tangram'],
         referencias: ['43313', '43112'],
         imagenes:  [
             'grimms/web-grimms/gxipyjnmck1okj97rooy',
@@ -52,7 +55,8 @@ export const Articulos: IArticulo[] = [
         descripciones: ["Construcción | El tiempo", "Construcción | El tiempo"],
         precio: "39,95 €",
         marca: 'grimm',
-        categoria: [],
+        nameMarca: 'Grimm\'s',
+        categoria: ['Madera', 'Construcciones'],
         referencias: ['10678', '10678'],
         imagenes:  [
             'grimms/web-grimms/ykfozaqctauufnwi7axp',
@@ -61,11 +65,12 @@ export const Articulos: IArticulo[] = [
     },
     { 
         id: "5",
-        titulo: "Puzzle de paisaje",
-        descripciones: ["Puzzle | Paisaje creativo"],
+        titulo: "Puzzles de paisaje",
+        descripciones: ["Puzzles | Paisaje creativo"],
         precio: "49,95 €",
         marca: 'grimm',
-        categoria: [],
+        nameMarca: 'Grimm\'s',
+        categoria: ['Madera', 'Puzzles'],
         referencias: ['43500'],
         imagenes:  [
             'grimms/web-grimms/u5o5yaewkxi9tkpcyg6k',
@@ -77,7 +82,8 @@ export const Articulos: IArticulo[] = [
         descripciones: ["Casa | Colores", "Casa | Natural", "Casa | Monocromo"],
         precio: "25,95 €",
         marca: 'grimm',
-        categoria: [],
+        nameMarca: 'Grimm\'s',
+        categoria: ['Madera', 'Construcciones'],
         referencias: ['10860', '10850', '93070'],
         imagenes:  [
             'grimms/web-grimms/wteefrfwislzq4mmrsej', 'grimms/web-grimms/zeptfmsiwcklpnak3dtl', 'grimms/web-grimms/ecwckn5cjpgzgsuhuto7'
@@ -89,7 +95,8 @@ export const Articulos: IArticulo[] = [
         descripciones: ["Fuego"],
         precio: "25,95 €",
         marca: 'grimm',
-        categoria: [],
+        nameMarca: 'Grimm\'s',
+        categoria: ['Madera', 'Construcciones'],
         referencias: ['10730'],
         imagenes:  [
             'grimms/web-grimms/tmy4gwvk4bnxxauuk32t',
@@ -101,7 +108,8 @@ export const Articulos: IArticulo[] = [
         descripciones: ["Flor"],
         precio: "44,95 €",
         marca: 'grimm',
-        categoria: [],
+        nameMarca: 'Grimm\'s',
+        categoria: ['Madera', 'Construcciones'],
         referencias: ['10900'],
         imagenes:  [
             'grimms/web-grimms/ciitcibn0rihdkgia4pu',
@@ -113,7 +121,8 @@ export const Articulos: IArticulo[] = [
         descripciones: ["Bloques Waldorf | Colores", "Bloques Waldorf | Monocromo"],
         precio: "30,95 €",
         marca: 'grimm',
-        categoria: [],
+        nameMarca: 'Grimm\'s',
+        categoria: ['Madera', 'Construcciones'],
         referencias: ['10010', '10020'],
         imagenes:  [
             'grimms/web-grimms/cwtvxvukirdck9tdmtkq',   
@@ -126,7 +135,8 @@ export const Articulos: IArticulo[] = [
         descripciones: ["Olas"],
         precio: "27,50 €",
         marca: 'grimm',
-        categoria: [],
+        nameMarca: 'Grimm\'s',
+        categoria: ['Madera', 'Construcciones'],
         referencias: ['10720'],
         imagenes:  [
             'grimms/web-grimms/qwxotq6owle1j9bx1whz',
@@ -138,7 +148,8 @@ export const Articulos: IArticulo[] = [
         descripciones: ["Bolas | Colores", "Bolas | Pastel", "Bolas | Monocromo"],
         precio: "15,95 €",
         marca: 'grimm',
-        categoria: [],
+        nameMarca: 'Grimm\'s',
+        categoria: ["Madera"],
         referencias: ['08121', '08136', '08132'],   
         imagenes:  [
             'grimms/web-grimms/m9fysikbrbthftrfdrny','grimms/web-grimms/rxowkt3g1rpz8sxb6qab','grimms/web-grimms/hv0qnupttsdztzkv7ctx'
@@ -150,7 +161,8 @@ export const Articulos: IArticulo[] = [
         descripciones: ["Semicírculos | Colores", "Semicírculos | Pastel", "Semicírculos | Monocromo"],
         precio: "51,95 €",
         marca: 'grimm',
-        categoria: [],
+        nameMarca: 'Grimm\'s',
+        categoria: ["Madera"],
         referencias: ['10675', '10674', '10676'],   
         imagenes:  [
             'grimms/web-grimms/clg4yrv6s9lqcuhecuu4','grimms/web-grimms/v6heidrmsblf8c4g8516','grimms/web-grimms/l4oo9u7656ldibjin3mb'
@@ -162,7 +174,8 @@ export const Articulos: IArticulo[] = [
         descripciones: ["Rueda rodante | Arcoiris"],
         precio: "35,95 €",
         marca: 'grimm',
-        categoria: [],
+        nameMarca: 'Grimm\'s',
+        categoria: ["Madera"],
         referencias: ['08503'],
         imagenes:  [
             'grimms/web-grimms/u5wykkv50hycckmdqmq0',
@@ -174,7 +187,8 @@ export const Articulos: IArticulo[] = [
         descripciones: ["Mini Rueda rodante | Arcoiris"],
         precio: "23,50 €",
         marca: 'grimm',
-        categoria: [],
+        nameMarca: 'Grimm\'s',
+        categoria: ["Madera"],
         referencias: ['08504'],
         imagenes:  [
             'grimms/web-grimms/nmjsxx3k948sm4ckaq7q',
@@ -186,7 +200,8 @@ export const Articulos: IArticulo[] = [
         descripciones: ["Barco | Arcoiris"],
         precio: "16,95 €",
         marca: 'grimm',
-        categoria: [],
+        nameMarca: 'Grimm\'s',
+        categoria: ["Madera"],
         referencias: ['08126'],
         imagenes:  [
             'grimms/web-grimms/xvgwykivpmxgsvrywvpw',
@@ -198,7 +213,8 @@ export const Articulos: IArticulo[] = [
         descripciones: ["Sonajero Piramide | Arcoiris"],
         precio: "13,80 €",
         marca: 'grimm',
-        categoria: [],
+        nameMarca: 'Grimm\'s',
+        categoria: ["Madera", "Sonajeros"],
         referencias: ['08150'],
         imagenes:  [
             'grimms/web-grimms/onvzslldpnjusvay6wje',
@@ -210,7 +226,8 @@ export const Articulos: IArticulo[] = [
         descripciones: ["Cubo con campana"],
         precio: "14,75 €",
         marca: 'grimm',
-        categoria: [],
+        nameMarca: 'Grimm\'s',
+        categoria: ["Madera", "Sonajeros"],
         referencias: ['08070'],
         imagenes:  [
             'grimms/web-grimms/n8vcupdrxz4q9cmttecr',
@@ -222,10 +239,50 @@ export const Articulos: IArticulo[] = [
         descripciones: ["Sonajero hexagonal"],
         precio: "13,80 €",
         marca: 'grimm',
-        categoria: [],
+        nameMarca: 'Grimm\'s',
+        categoria: ["Madera", "Sonajeros"],
         referencias: ['08140'],
         imagenes:  [
             'grimms/web-grimms/qmlg8qx6rllo5hzbtvrq',
+        ]
+    },
+    { 
+        id: "19",
+        titulo: "12 cuencos",
+        descripciones: ["12 cuencos"],
+        precio: "37,05 €",
+        marca: 'grapat',
+        nameMarca: 'Grapat',
+        categoria: ["Madera"],
+        referencias: ['16-138'],
+        imagenes:  [
+            'grapat/qehcbvxhrekoilcyz0yw',
+        ]
+    },
+    { 
+        id: "20",
+        titulo: "Peonza cubilete",
+        descripciones: ["Peonza cubilete"],
+        precio: "11,35 €",
+        marca: 'grapat',
+        nameMarca: 'Grapat',
+        categoria: ["Madera"],
+        referencias: ['21-224'],
+        imagenes:  [
+            'grapat/e7jkhwiwm2evjrjycisa',
+        ]
+    },
+    { 
+        id: "21",
+        titulo: "Nins, anillas y monedas",
+        descripciones: ["Nins, anillas y monedas", "Nins, anillas y monedas | Colores compl."],
+        precio: "42,90 €",
+        marca: 'grapat',
+        nameMarca: 'Grapat',
+        categoria: ["Madera"],
+        referencias: ['15-102', '15-102B'],
+        imagenes:  [
+            'grapat/jc8splq4qm21pevstw8w','grapat/fvtg2qn3atfgrmbemid3'
         ]
     },
 ]

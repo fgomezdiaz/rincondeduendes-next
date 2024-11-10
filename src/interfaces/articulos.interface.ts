@@ -1,3 +1,4 @@
+import { TCategoria } from "./categorias.interface";
 
 
 export interface IArticulo {
@@ -6,7 +7,8 @@ export interface IArticulo {
     descripciones: string[];
     precio: string;
     marca: string;
-    categoria?: string[];
+    nameMarca?: string;
+    categoria?: TCategoria[];
     referencias: string[];
     imagenes: string[];
 }
