@@ -18,6 +18,7 @@ const geistMono = localFont({
 export const metadata: Metadata = {
   title: "Rincón de Duendes",
   description: "Librería infantil y juguetería",
+  keywords: ["librería", "infantil", "juguetería", "juguetes", "libros", "madera", "puzzles", "construcciones"],
 };
 
 export default function RootLayout({

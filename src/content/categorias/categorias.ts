@@ -19,5 +19,11 @@ export const Categorias: ICategoria[] = [
         nombre: 'Puzzles',
         descripcion : 'Puzzles',
         avatar: 'puzzles.jpg'
+    },
+    {
+        id: '4',
+        nombre: 'De_0_a_1',
+        descripcion : 'De 0 a 1',
+        avatar: 'puzzles.jpg'
     }
 ]

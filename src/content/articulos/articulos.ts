@@ -188,7 +188,7 @@ export const Articulos: IArticulo[] = [
         precio: "23,50 €",
         marca: 'grimm',
         nameMarca: 'Grimm\'s',
-        categoria: ["Madera"],
+        categoria: ["Madera", "De_0_a_1"],
         referencias: ['08504'],
         imagenes:  [
             'grimms/web-grimms/nmjsxx3k948sm4ckaq7q',
@@ -248,15 +248,15 @@ export const Articulos: IArticulo[] = [
     },
     { 
         id: "19",
-        titulo: "12 cuencos",
-        descripciones: ["12 cuencos"],
-        precio: "37,05 €",
+        titulo: "Panera de los tesoros grande",
+        descripciones: ["Panera de los tesoros grande"],
+        precio: "39,10 €",
         marca: 'grapat',
         nameMarca: 'Grapat',
         categoria: ["Madera"],
-        referencias: ['16-138'],
+        referencias: ['16-131'],
         imagenes:  [
-            'grapat/qehcbvxhrekoilcyz0yw',
+            'grapat/vrafktdwjc77waawn2iu',
         ]
     },
     { 
@@ -283,6 +283,71 @@ export const Articulos: IArticulo[] = [
         referencias: ['15-102', '15-102B'],
         imagenes:  [
             'grapat/jc8splq4qm21pevstw8w','grapat/fvtg2qn3atfgrmbemid3'
+        ]
+    },
+    { 
+        id: "22",
+        titulo: "Nins, mates y monedas",
+        descripciones: ["Nins, mates y monedas"],
+        precio: "42,20 €",
+        marca: 'grapat',
+        nameMarca: 'Grapat',
+        categoria: ["Madera"],
+        referencias: ['15-101'],
+        imagenes:  [
+            'grapat/mngtexa0jvwx7uifp7sp'
+        ]
+    },
+    { 
+        id: "32",
+        titulo: "Cuencos y bolas",
+        descripciones: ["Cuencos y bolas"],
+        precio: "47,60 €",
+        marca: 'grapat',
+        nameMarca: 'Grapat',
+        categoria: ["Madera"],
+        referencias: ['15-105'],
+        imagenes:  [
+            'grapat/lcvtfnir4h0qm0t5gtut'
+        ]
+    },
+    { 
+        id: "33",
+        titulo: "Cuencos y bellotas",
+        descripciones: ["Cuencos y bellotas"],
+        precio: "44,75 €",
+        marca: 'grapat',
+        nameMarca: 'Grapat',
+        categoria: ["Madera"],
+        referencias: ['15-107'],
+        imagenes:  [
+            'grapat/m1dlrobcfn4y8nyqk56s'
+        ]
+    },
+    { 
+        id: "34",
+        titulo: "Aguamarina",
+        descripciones: ["Aguamarina Verano", "Aguamarina Otoño", "Aguamarina Invierno", "Aguamarina Primavera"],
+        precio: "35,75 €",
+        marca: 'grapat',
+        nameMarca: 'Grapat',
+        categoria: ["Madera"],
+        referencias: ['16-162', '16-163', '16-164', '16-165'],
+        imagenes:  [
+            'grapat/r4lgkfvbagkafwxx8asl', 'grapat/wmxpqemoecaevlwanlxw', 'grapat/zteshcji2f6gfaqglvfk', 'grapat/w9knc3mzjqlflidccvy6'
+        ]
+    },
+    { 
+        id: "35",
+        titulo: "Caja de juego",
+        descripciones: ["Caja de juego"],
+        precio: "49,60 €",
+        marca: 'grapat',
+        nameMarca: 'Grapat',
+        categoria: ["Madera"],
+        referencias: ['16-135'],
+        imagenes:  [
+            'grapat/s3mpnmcz8l21y6mmtfgk'
         ]
     },
 ]
