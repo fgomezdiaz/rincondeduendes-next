@@ -250,7 +250,7 @@ export const Articulos: IArticulo[] = [
         id: "19",
         titulo: "Panera de los tesoros grande",
         descripciones: ["Panera de los tesoros grande"],
-        precio: "39,10 €",
+        precio: "39,90 €",
         marca: 'grapat',
         nameMarca: 'Grapat',
         categoria: ["Madera"],
@@ -262,14 +262,14 @@ export const Articulos: IArticulo[] = [
     { 
         id: "20",
         titulo: "Peonza cubilete",
-        descripciones: ["Peonza cubilete"],
-        precio: "11,35 €",
+        descripciones: ["Peonza cubilete violeta", "Peonza cubilete azul", "Peonza cubilete naranja", "Peonza cubilete verde", "Peonza cubilete amarillo"],
+        precio: "11,20 €",
         marca: 'grapat',
         nameMarca: 'Grapat',
         categoria: ["Madera"],
-        referencias: ['21-224'],
+        referencias: ['21-224', '21-225', '21-228', '21-226', '21-227'],
         imagenes:  [
-            'grapat/e7jkhwiwm2evjrjycisa',
+            'grapat/e7jkhwiwm2evjrjycisa', 'grapat/qltwcyigpofb5y4svhjh', "grapat/hy1g0mgoofawqmao7ihe", "grapat/tx6motqkmryspkpdu5ti", "grapat/xdlg46mlp2lf3ef71ycg"
         ]
     },
     { 
@@ -289,7 +289,7 @@ export const Articulos: IArticulo[] = [
         id: "22",
         titulo: "Nins, mates y monedas",
         descripciones: ["Nins, mates y monedas"],
-        precio: "42,20 €",
+        precio: "42,90 €",
         marca: 'grapat',
         nameMarca: 'Grapat',
         categoria: ["Madera"],
@@ -302,7 +302,7 @@ export const Articulos: IArticulo[] = [
         id: "32",
         titulo: "Cuencos y bolas",
         descripciones: ["Cuencos y bolas"],
-        precio: "47,60 €",
+        precio: "48,50 €",
         marca: 'grapat',
         nameMarca: 'Grapat',
         categoria: ["Madera"],
@@ -315,7 +315,7 @@ export const Articulos: IArticulo[] = [
         id: "33",
         titulo: "Cuencos y bellotas",
         descripciones: ["Cuencos y bellotas"],
-        precio: "44,75 €",
+        precio: "44,50 €",
         marca: 'grapat',
         nameMarca: 'Grapat',
         categoria: ["Madera"],
@@ -328,7 +328,7 @@ export const Articulos: IArticulo[] = [
         id: "34",
         titulo: "Aguamarina",
         descripciones: ["Aguamarina Verano", "Aguamarina Otoño", "Aguamarina Invierno", "Aguamarina Primavera"],
-        precio: "35,75 €",
+        precio: "35,95 €",
         marca: 'grapat',
         nameMarca: 'Grapat',
         categoria: ["Madera"],
@@ -341,7 +341,7 @@ export const Articulos: IArticulo[] = [
         id: "35",
         titulo: "Caja de juego",
         descripciones: ["Caja de juego"],
-        precio: "49,60 €",
+        precio: "49,50 €",
         marca: 'grapat',
         nameMarca: 'Grapat',
         categoria: ["Madera"],
@@ -350,4 +350,200 @@ export const Articulos: IArticulo[] = [
             'grapat/s3mpnmcz8l21y6mmtfgk'
         ]
     },
+    { 
+        id: "36",
+        titulo: "Calendario perpetuo",
+        descripciones: ["Calendario perpetuo"],
+        precio: "49,90 €",
+        marca: 'grapat',
+        nameMarca: 'Grapat',
+        categoria: ["Madera"],
+        referencias: ['17-167'],
+        imagenes:  [
+            'grapat/o96m1yc5e3fpwxto4mrg'
+        ]
+    },
+    { 
+        id: "37",
+        titulo: "Calendario semanal 7 lunas",
+        descripciones: ["Calendario semanal 7 lunas"],
+        precio: "44,50 €",
+        marca: 'grapat',
+        nameMarca: 'Grapat',
+        categoria: ["Madera"],
+        referencias: ['17-168'],
+        imagenes:  [
+            'grapat/du4d71fjfdlimtdwodnh'
+        ]
+    },
+    { 
+        id: "38",
+        titulo: "Platos arcoiris",
+        descripciones: ["Platos arcoiris"],
+        precio: "39,90 €",
+        marca: 'grapat',
+        nameMarca: 'Grapat',
+        categoria: ["Madera"],
+        referencias: ['17-170'],
+        imagenes:  [
+            'grapat/fq3ddk4gldhphijlykta'
+        ]
+    },
+    { 
+        id: "39",
+        titulo: "Palos",
+        descripciones: ["Palos"],
+        precio: "33,90 €",
+        marca: 'grapat',
+        nameMarca: 'Grapat',
+        categoria: ["Madera"],
+        referencias: ['18-178'],
+        imagenes:  [
+            'grapat/ggsijz4rqmb5yrl5yymg'
+        ]
+    },
+    { 
+        id: "40",
+        titulo: "Nins bebés",
+        descripciones: ["Nins bebés"],
+        precio: "18,90 €",
+        marca: 'grapat',
+        nameMarca: 'Grapat',
+        categoria: ["Madera"],
+        referencias: ['18-180'],
+        imagenes:  [
+            'grapat/scxi6pz5ztuz1ximr8pn'
+        ]
+    },
+    { 
+        id: "41",
+        titulo: "Magos",
+        descripciones: ["Magos"],
+        precio: "39,90 €",
+        marca: 'grapat',
+        nameMarca: 'Grapat',
+        categoria: ["Madera"],
+        referencias: ['18-182'],
+        imagenes:  [
+            'grapat/vllgiw7twknlvmyv1eyp'
+        ]
+    },
+    { 
+        id: "42",
+        titulo: "Nins Tomten",
+        descripciones: ["Nins Tomten"],
+        precio: "34,90 €",
+        marca: 'grapat',
+        nameMarca: 'Grapat',
+        categoria: ["Madera"],
+        referencias: ['18-196'],
+        imagenes:  [
+            'grapat/nncupnjnjkszkxfzi2qy'
+        ]
+    },
+    { 
+        id: "43",
+        titulo: "Juntos",
+        descripciones: ["Juntos"],
+        precio: "47,50 €",
+        marca: 'grapat',
+        nameMarca: 'Grapat',
+        categoria: ["Madera"],
+        referencias: ['21-230'],
+        imagenes:  [
+            'grapat/rdn3fqy8qycvym96zfv8'
+        ]
+    },
+    { 
+        id: "44",
+        titulo: "Lola",
+        descripciones: ["Lola"],
+        precio: "92,50 €",
+        marca: 'grapat',
+        nameMarca: 'Grapat',
+        categoria: ["Madera"],
+        referencias: ['20-212'],
+        imagenes:  [
+            'grapat/o4hxmwtfhtcghqoantap'
+        ]
+    },
+    { 
+        id: "45",
+        titulo: "Bandeja tinker",
+        descripciones: ["Bandeja tinker"],
+        precio: "42,90 €",
+        marca: 'grapat',
+        nameMarca: 'Grapat',
+        categoria: ["Madera"],
+        referencias: ['19-211'],
+        imagenes:  [
+            'grapat/tnqnbbntkpwhhfjnudtr'
+        ]
+    },
+    { 
+        id: "46",
+        titulo: "Plataforma estaciones",
+        descripciones: ["Plataforma estaciones"],
+        precio: "46,90 €",
+        marca: 'grapat',
+        nameMarca: 'Grapat',
+        categoria: ["Madera"],
+        referencias: ['19-210'],
+        imagenes:  [
+            'grapat/qchsvwj9n97ktsqw2czx'
+        ]
+    },
+    { 
+        id: "47",
+        titulo: "Wild",
+        descripciones: ["Wild"],
+        precio: "64,50 €",
+        marca: 'grapat',
+        nameMarca: 'Grapat',
+        categoria: ["Madera"],
+        referencias: ['22-232'],
+        imagenes:  [
+            'grapat/alhhb0a4hxta8hsophrf'
+        ]
+    },
+    { 
+        id: "48",
+        titulo: "Palos bebés",
+        descripciones: ["Palos bebés"],
+        precio: "19,90 €",
+        marca: 'grapat',
+        nameMarca: 'Grapat',
+        categoria: ["Madera"],
+        referencias: ['21-231'],
+        imagenes:  [
+            'grapat/wmtatxfgdtjrqagc6ssg'
+        ]
+    },
+    { 
+        id: "49",
+        titulo: "Maravillas",
+        descripciones: ["Maravillas"],
+        precio: "41,50 €",
+        marca: 'grapat',
+        nameMarca: 'Grapat',
+        categoria: ["Madera"],
+        referencias: ['22-233'],
+        imagenes:  [
+            'grapat/eksdj7vbnmzro0tlkoc3'
+        ]
+    },
+    { 
+        id: "50",
+        titulo: "Plataforma pétalos",
+        descripciones: ["Plataforma pétalos"],
+        precio: "79,95 €",
+        marca: 'grapat',
+        nameMarca: 'Grapat',
+        categoria: ["Madera"],
+        referencias: ['22-238'],
+        imagenes:  [
+            'grapat/vmfck7bp2wqlaoqrvykj'
+        ]
+    },
+
 ]
