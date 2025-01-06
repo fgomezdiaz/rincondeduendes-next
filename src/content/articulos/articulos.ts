@@ -597,5 +597,187 @@ export const Articulos: IArticulo[] = [
             'grimms/web-grimms/jsn60bbud4arvevtadlf'
         ]
     },
+    { 
+        id: "55",
+        titulo: "Ardilla",
+        descripciones: ["Ardilla | Marioneta"],
+        precio: "62,50 €",
+        marca: 'folkmanis',
+        nameMarca: 'Folkmanis Puppets',
+        categoria: ["Marionetas"],
+        referencias: ['2250'],
+        imagenes:  [
+            'folkmanis/cr1kb4bgaqmq3ug1kvnv'
+        ]
+    },
+    { 
+        id: "56",
+        titulo: "Ardilla",
+        descripciones: ["Ardilla | Marioneta"],
+        precio: "57,90 €",
+        marca: 'folkmanis',
+        nameMarca: 'Folkmanis Puppets',
+        categoria: ["Marionetas"],
+        referencias: ['2880'],
+        imagenes:  [
+            'folkmanis/fbetojo4khkomllielde'
+        ]
+    },
+    { 
+        id: "57",
+        titulo: "Hurón",
+        descripciones: ["Hurón | Marioneta"],
+        precio: "68,50 €",
+        marca: 'folkmanis',
+        nameMarca: 'Folkmanis Puppets',
+        categoria: ["Marionetas"],
+        referencias: ['2843'],
+        imagenes:  [
+            'folkmanis/ed1irtwhmbmyitwkinty'
+        ]
+    },
+    { 
+        id: "58",
+        titulo: "Bloque de construcción",
+        descripciones: ["Bloque de construcción | 60 pzs XXL"],
+        precio: "69,90 €",
+        marca: 'gigi',
+        nameMarca: 'Gigi Bloks',
+        categoria: ["Construcciones"],
+        referencias: ['09003'],
+        imagenes:  [
+            'gigi/jj5ybimb7nqi9mks50jn'
+        ]
+    },
+    { 
+        id: "59",
+        titulo: "Bloque de construcción",
+        descripciones: ["Bloque de construcción | 96 pzs XL"],
+        precio: "48,50 €",
+        marca: 'gigi',
+        nameMarca: 'Gigi Bloks',
+        categoria: ["Construcciones"],
+        referencias: ['09008'],
+        imagenes:  [
+            'gigi/jy45g4czzneilgebscv1'
+        ]
+    },
+    { 
+        id: "60",
+        titulo: "Jirafa",
+        descripciones: ["Jirafa | 14 x 2,8 x 21,5 cm"],
+        precio: "17,50 €",
+        marca: 'holztiger',
+        nameMarca: 'Holztiger',
+        categoria: ["Animales"],
+        referencias: ['80155'],
+        imagenes:  [
+            'holztiger/u9hb3iotdwtxrwav7a6h'
+        ]
+    },
+    { 
+        id: "61",
+        titulo: "Cocodrilo",
+        descripciones: ["Cocodrilo | 25 x 2,8 x 8 cm"],
+        precio: "14,95 €",
+        marca: 'holztiger',
+        nameMarca: 'Holztiger',
+        categoria: ["Animales"],
+        referencias: ['80174'],
+        imagenes:  [
+            'holztiger/hl1doldb3tqy8shbvnli'
+        ]
+    },
+    { 
+        id: "62",
+        titulo: "Delfín",
+        descripciones: ["Delfín | 16,5 x 2,8 x 9 cm"],
+        precio: "12,50 €",
+        marca: 'holztiger',
+        nameMarca: 'Holztiger',
+        categoria: ["Animales"],
+        referencias: ['80196'],
+        imagenes:  [
+            'holztiger/tj497aqyzoxkas4rxhvw'
+        ]
+    },
+    { 
+        id: "63",
+        titulo: "León",
+        descripciones: ["León | 15 x 2,8 x 13 cm"],
+        precio: "14,40 €",
+        marca: 'holztiger',
+        nameMarca: 'Holztiger',
+        categoria: ["Animales"],
+        referencias: ['80139'],
+        imagenes:  [
+            'holztiger/cmbb8pinac5b8ptoafto'
+        ]
+    },
+    { 
+        id: "64",
+        titulo: "Tiburón",
+        descripciones: ["Tiburón | 20 x 2,8 x 7,5 cm"],
+        precio: "12,50 €",
+        marca: 'holztiger',
+        nameMarca: 'Holztiger',
+        categoria: ["Animales"],
+        referencias: ['80200'],
+        imagenes:  [
+            'holztiger/lea5zyvsh5s28xgsxjbm'
+        ]
+    },
+    { 
+        id: "65",
+        titulo: "Elefante",
+        descripciones: ["Elefante | 18 x 2,8 x 16 cm"],
+        precio: "18,50 €",
+        marca: 'holztiger',
+        nameMarca: 'Holztiger',
+        categoria: ["Animales"],
+        referencias: ['80148'],
+        imagenes:  [
+            'holztiger/gh6gmnnjhhmknb2nx9dr'
+        ]
+    },
+    { 
+        id: "66",
+        titulo: "Hipopótamo",
+        descripciones: ["Hipopótamo | 18 x 2,8 x 9 cm"],
+        precio: "14,90 €",
+        marca: 'holztiger',
+        nameMarca: 'Holztiger',
+        categoria: ["Animales"],
+        referencias: ['80161'],
+        imagenes:  [
+            'holztiger/cufinpwoprj3cq3ewvwc'
+        ]
+    },
+    { 
+        id: "67",
+        titulo: "Dragón",
+        descripciones: ["Dragón | 17 x 2,8 x 16 cm"],
+        precio: "18,50 €",
+        marca: 'holztiger',
+        nameMarca: 'Holztiger',
+        categoria: ["Animales"],
+        referencias: ['80280'],
+        imagenes:  [
+            'holztiger/oa7puesidkmvpbqzl8nr'
+        ]
+    },
+    { 
+        id: "68",
+        titulo: "Orca",
+        descripciones: ["Orca | 16,5 x 2,8 x 8 cm"],
+        precio: "14,95 €",
+        marca: 'holztiger',
+        nameMarca: 'Holztiger',
+        categoria: ["Animales"],
+        referencias: ['80197'],
+        imagenes:  [
+            'holztiger/tdfapqzyqqowdln21qlr'
+        ]
+    },
 
 ]

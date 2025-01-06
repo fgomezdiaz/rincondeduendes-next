@@ -19,6 +19,7 @@ export const CardMarca = ({marca}:Props) => {
                 src={marca.imagenCloudinary || ''}
                 width={1000}
                 height={1000}
+                crop='fit'
                 alt={marca.nombre}
                 loading="eager"
                 />
