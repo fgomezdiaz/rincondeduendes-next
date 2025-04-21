@@ -27,10 +27,10 @@ export const DropwDownCategorias = ({categorias}:Props) => {
             <path d="M4 20h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.93a2 2 0 0 1-1.66-.9l-.82-1.2A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13c0 1.1.9 2 2 2Z"/>
             <path d="M2 10h20"/>
         </svg>
-      Elegir categoría
+      Categoría
     </button>
         {isOpen && (
-        <ul tabIndex={0} className="dropdown-content menu bg-base-100 rounded-box z-[1] w-[350px] p-1 shadow grid grid-cols-2">
+        <ul tabIndex={0} className="dropdown-content menu bg-base-100 rounded-box z-[1] w-[200px] p-1 shadow grid grid-cols-1 md:grid-cols-2 md:w-[350px]">
         {
         categorias.map((categoria) => (
             <li className="p-0" key={categoria.id}>

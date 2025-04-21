@@ -779,5 +779,112 @@ export const Articulos: IArticulo[] = [
             'holztiger/tdfapqzyqqowdln21qlr'
         ]
     },
-
+    { 
+        id: "69",
+        titulo: "Caja de audio",
+        descripciones: ["Caja de audio", "Caja de audio"],
+        precio: "69,90 €",
+        marca: 'faba',
+        nameMarca: 'Faba',
+        categoria: ["Música"],
+        referencias: ['FBL10002', "FBL10002"],
+        imagenes:  [
+            'faba/pakdu7gjpbhsvoigdkja', 'faba/glwa9ueep6rqo6bjnrbu'
+        ]
+    },
+    { 
+        id: "70",
+        titulo: "Cuentacuentos",
+        descripciones: ["Cuentacuentos"],
+        precio: "49,90 €",
+        marca: 'faba',
+        nameMarca: 'Faba',
+        categoria: ["Cuentacuentos"],
+        referencias: ['FBL10001'],
+        imagenes:  [
+            'faba/lxnvogfxyyx4fakd8c0l'
+        ]
+    },
+    { 
+        id: "71",
+        titulo: "Caperucita roja",
+        descripciones: ["Caperucita roja y otro cuento"],
+        precio: "12,90 €",
+        marca: 'faba',
+        nameMarca: 'Faba',
+        categoria: ["Cuentacuentos"],
+        referencias: ['FFE10006'],
+        imagenes:  [
+            'faba/v7knmluiuxudagkawsgi'
+        ]
+    },
+    { 
+        id: "72",
+        titulo: "Cançons populars per a infants",
+        descripciones: ["Cançons populars per a infants"],
+        precio: "12,90 €",
+        marca: 'faba',
+        nameMarca: 'Faba',
+        categoria: ["Cuentacuentos"],
+        referencias: ['FFE30002'],
+        imagenes:  [
+            'faba/qfib2t6hwvq8pmo57wws'
+        ]
+    },
+    { 
+        id: "73",
+        titulo: "Colarroja se hace mayor",
+        descripciones: ["Colarroja se hace mayor"],
+        precio: "12,90 €",
+        marca: 'faba',
+        nameMarca: 'Faba',
+        categoria: ["Cuentacuentos"],
+        referencias: ['FFE10011'],
+        imagenes:  [
+            'faba/zptoxvx59htmbeagcrur'
+        ]
+    },
+    { 
+        id: "74",
+        titulo: "Cuentos con beso buenas noches",
+        descripciones: ["Cuentos con beso buenas noches"],
+        precio: "12,90 €",
+        marca: 'faba',
+        nameMarca: 'Faba',
+        categoria: ["Cuentacuentos"],
+        referencias: ['FFE10008'],
+        imagenes:  [
+            'faba/l71mmgwv3xbvqkdrjfy0'
+        ]
+    },
+    { 
+        id: "75",
+        titulo: "Los abrazos de las buenas noches",
+        descripciones: ["Los abrazos de las buenas noches"],
+        precio: "12,90 €",
+        marca: 'faba',
+        nameMarca: 'Faba',
+        categoria: ["Cuentacuentos"],
+        referencias: ['FFL30002'],
+        imagenes:  [
+            'faba/qsiregw7zzciabmugb4b'
+        ]
+    },
+    { 
+        id: "76",
+        titulo: "El gato botas y otro cuento",
+        descripciones: ["El gato botas y otro cuento"],
+        precio: "12,90 €",
+        marca: 'faba',
+        nameMarca: 'Faba',
+        categoria: ["Cuentacuentos"],
+        referencias: ['FFE10003'],
+        imagenes:  [
+            'faba/rnb72hsqwbsxlndw8avn'
+        ]
+    },
 ]
+
+
+
+
