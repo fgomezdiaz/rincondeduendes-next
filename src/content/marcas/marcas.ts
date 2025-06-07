@@ -107,6 +107,13 @@ export const Marcas: IMarca[] = [
         "descripcion": "Vestida de Azul es una marca argentina de ropa para bebés y niños. Sus prendas son de alta calidad y están diseñadas con mucho cariño y cuidado.",
         "avatar": "avatar-vestidadeazul.png",
         "imagenCloudinary":"marcas/imagenes/vestidadeazul_mohqyh"
+    },
+    {
+        "id": "bling2o",
+        "nombre": "Bling2o",
+        "descripcion": "Bling2O ofrece una amplia variedad de gafas de natación de diseños creativos y coloridos, que van desde temas de animales hasta estilos más sofisticados. Estos diseños no solo atraen visualmente, sino que también hacen que la experiencia de nadar sea más divertida y personalizada.",
+        "avatar": "avatar-bling2o.webp",
+        "imagenCloudinary":"marcas/imagenes/bling20_ujp2kn"
     }
     
     
