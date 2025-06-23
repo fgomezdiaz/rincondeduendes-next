@@ -1728,6 +1728,190 @@ export const Articulos: IArticulo[] = [
             'haba/PA8C00003011_awstgi'
         ]
     },
+    { 
+        id: "142",
+        titulo: "H304700 - El Valle de los Vikingos",
+        descripciones: ["H304700 - El Valle de los Vikingos"],
+        precio: "31,99 €",
+        marca: 'haba',
+        nameMarca: 'Haba',
+        categoria: ["Juegos"],
+        referencias: ['H1304839001'],
+        imagenes: [
+            'haba/PA8C00003066_zlxpaa'
+        ]
+    },
+    { 
+        id: "143",
+        titulo: "H305546 - The Key Robo en la masión Cliffrock",
+        descripciones: ["H305546 - The Key Robo en la masión Cliffrock"],
+        precio: "31,99 €",
+        marca: 'haba',
+        nameMarca: 'Haba',
+        categoria: ["Juegos"],
+        referencias: ['H1305543006'],
+        imagenes: [
+            'haba/PA8C00003116_oknznm'
+        ]
+    },
+    { 
+        id: "144",
+        titulo: "H305857 - The Key Sabotaje en el Parque de Atracciones",
+        descripciones: ["H305857 - The Key Sabotaje en el Parque de Atracciones"],
+        precio: "31,99 €",
+        marca: 'haba',
+        nameMarca: 'Haba',
+        categoria: ["Juegos"],
+        referencias: ['H1305855006'],
+        imagenes: [
+            'haba/PA8C00003130_ydcywi'
+        ]
+    },
+    { 
+        id: "145",
+        titulo: "H306405 - El Rey de los Dados - El juego de mesa",
+        descripciones: ["H306405 - El Rey de los Dados - El juego de mesa"],
+        precio: "31,99 €",
+        marca: 'haba',
+        nameMarca: 'Haba',
+        categoria: ["Juegos"],
+        referencias: ['H1306400005'],
+        imagenes: [
+            'haba/PA8C00003196_cutaqn'
+        ]
+    },
+    { 
+        id: "146",
+        titulo: "H306516 - Bolsa Portapañales Pradera Estival",
+        descripciones: ["H306516 - Bolsa Portapañales Pradera Estival"],
+        precio: "34,99 €",
+        marca: 'haba',
+        nameMarca: 'Haba',
+        categoria: ["Juegos"],
+        referencias: ['H1306516001'],
+        imagenes: [
+            'haba/PA8C00003205_zbjljp'
+        ]
+    },
+    { 
+        id: "147",
+        titulo: "H306603 - Mis primeros juegos. Tras la pista del Perezoso",
+        descripciones: ["H306603 - Mis primeros juegos. Tras la pista del Perezoso"],
+        precio: "26,99 €",
+        marca: 'haba',
+        nameMarca: 'Haba',
+        categoria: ["Juegos"],
+        referencias: ['H1306599005'],
+        imagenes: [
+            'haba/PA8C00003215_byhqgk'
+        ]
+    },
+    { 
+        id: "148",
+        titulo: "H306610 - Mis primeros juegos. La Pandilla del Bosque",
+        descripciones: ["H306610 - Mis primeros juegos. La Pandilla del Bosque"],
+        precio: "26,99 €",
+        marca: 'haba',
+        nameMarca: 'Haba',
+        categoria: ["Juegos"],
+        referencias: ['H1306605606'],
+        imagenes: [
+            'haba/PA8C00003216_szoees'
+        ]
+    },
+    { 
+        id: "149",
+        titulo: "Estrellas Fugaces",
+        descripciones: ["Estrellas Fugaces"],
+        precio: "37,99 €",
+        marca: 'haba',
+        nameMarca: 'Haba',
+        categoria: ["Juegos"],
+        referencias: ['H1307119006'],
+        imagenes: [
+            'haba/PA8C00004768_frpgxj'
+        ]
+    },
+        { 
+            id: "150",
+            titulo: "Dragones de agua",
+            descripciones: ["Dragones de agua"],
+            precio: "26,99 €",
+            marca: 'haba',
+            nameMarca: 'Haba',
+            categoria: ["Juegos"],
+            referencias: ['H1307133006'],
+            imagenes: [
+                'haba/PA8C00004770_b6u51l'
+            ]
+        },  
+        { 
+            id: "151",
+            titulo: "Oso Napi",
+            descripciones: ["Oso Napi"],
+            precio: "26,99 €",
+            marca: 'haba',
+            nameMarca: 'Haba',
+            categoria: ["Juegos"],
+            referencias: ['H2010881005'],
+            imagenes: [
+                'haba/PA8C00007203_wlmp0k'
+            ]
+        },
+        { 
+            id: "152",
+            titulo: "Rally Bambú",
+            descripciones: ["Rally Bambú"],
+            precio: "31,99 €",
+            marca: 'haba',
+            nameMarca: 'Haba',
+            categoria: ["Juegos"],
+            referencias: ['H2010883006'],
+            imagenes: [
+                'haba/PA8C00007204_ebuixz'
+            ]
+        },
+        { 
+            id: "153",
+            titulo: "Bella Bee",
+            descripciones: ["Bella Bee"],
+            precio: "15,99 €",
+            marca: 'haba',
+            nameMarca: 'Haba',
+            categoria: ["Juegos"],
+            referencias: ['H2010885003'],
+            imagenes: [
+                'haba/PA8C00007183_qgkx4p'
+            ]
+        },
+        { 
+            id: "154",
+            titulo: "Destornillador con punzón",
+            descripciones: ["Destornillador con punzón","Destornillador con punzón"],
+            precio: "8,50 €",
+            marca: 'makedo',
+            nameMarca: 'Makedo',
+            categoria: ["Juegos"],
+            referencias: ['MKDD00001','MKDD00001'],
+            imagenes: [
+                'makedo/makedo-destornillador-con-punzon-1-unidad_xtjq7t',
+                'makedo/scru-drivermakedo-120467-800x800_ldal1j'
+            ]
+        },
+        { 
+            id: "155",
+            titulo: "Sistema creativo de construcción en cartón",
+            descripciones: ["Sistema creativo de construcción en cartón","Sistema creativo de construcción en cartón"],
+            precio: "42,50 €",
+            marca: 'makedo',
+            nameMarca: 'Makedo',
+            categoria: ["Juegos"],
+            referencias: ['MKDA0126','MKDA0126'],
+            imagenes: [
+                'makedo/makedo-discover-sistema-creativo-de-construccion-de-carton-126-piezas_1_ide7q7',
+                'makedo/makedo-discover-sistema-creativo-de-construccion-de-carton-126-piezas_j2dntj'
+            ]
+        },
 ];
 
 
