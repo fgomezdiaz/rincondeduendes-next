@@ -32,9 +32,11 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <ScrollToTopOnRouteChange />
-        <div className="min-h-screen flex flex-col h-screen overflow-y-hidden bg-gradient-to-r from-white  via-gray-200 to-white ">
+        <div className="min-h-screen max-h-screen flex flex-col bg-gradient-to-r from-white via-gray-200 to-white">
           <NavBar  />
-          {children}
+          <main className="flex-1 overflow-y-auto">
+            {children}
+          </main>
           <footer className="w-full justify-center items-center bottom-0 text-center ">
             <div className="flex justify-center gap-1 pb-2 md:pb-4 pt-0 md:pt-4 ">
               <span className="text-default-600">Powered by</span>
