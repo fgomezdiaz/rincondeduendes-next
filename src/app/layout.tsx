@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import NavBar from "../components/NavBar";
+import { MobileVhFix } from "../components/MobileVhFix";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -30,7 +31,8 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <div className="min-h-screen flex flex-col h-screen overflow-y-hidden bg-gradient-to-r from-white  via-gray-200 to-white ">
+        <MobileVhFix />
+        <div className="fix-mobile-vh min-h-screen flex flex-col h-screen overflow-y-hidden bg-gradient-to-r from-white  via-gray-200 to-white ">
           <NavBar  />
           {children}
           <footer className="w-full justify-center items-center bottom-0 text-center ">
@@ -40,6 +42,12 @@ export default function RootLayout({
             </div>
           </footer>
         </div>
+        <style>{`
+          :root { --vh: 1vh; }
+          @media (max-width: 640px) {
+            .fix-mobile-vh { min-height: calc(var(--vh, 1vh) * 100); }
+          }
+        `}</style>
       </body>
     </html>
   );
