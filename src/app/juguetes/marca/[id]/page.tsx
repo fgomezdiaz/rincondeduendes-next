@@ -1,7 +1,7 @@
 import { getArticulosByMarca } from "@/actions/articulos.actions";
 import { getAllMarcas } from "@/actions/marcas.actions";
 import { CardArticulo } from "@/components/CardArticulo";
-import { PreloadImages } from "@/components/PreloadImages";
+import { ScrollToTopOnMarcaChange } from "@/components/ScrollToTopOnMarcaChange";
 
 export async function generateStaticParams() {
     const marcas = await getAllMarcas();
@@ -24,7 +24,7 @@ export default async function ArticuloByMarcaPage({ params }: Props) {
     
     return (
         <>
-            <PreloadImages articulos={articulos} />
+            <ScrollToTopOnMarcaChange />
             <div className="flex flex-1 overflow-y-auto mb-0 mt-2  md:mb-2 justify-center">
                 {/* Sección principal */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 px-4 md:px-10 lg:px-40 gap-10 ">
