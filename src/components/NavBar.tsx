@@ -59,7 +59,7 @@ export default function NavigationBar() {
   )
 
   return (
-    <nav className="flex px-5 justify-between items-center w-full mt-4 ">
+    <nav className="relative z-50 flex px-5 justify-between items-center w-full py-4 bg-white/80 backdrop-blur-sm border-b border-gray-200">
       <div>
         <Link href="/">
           <Image src={LOGO} alt="Rincón de Duendes" width={80} height={80} className="object-cover object-center" priority />
@@ -85,7 +85,7 @@ export default function NavigationBar() {
         id="mobile-menu"
         className={`${
           isMobileMenuOpen ? 'flex' : 'hidden'
-        } absolute top-16 left-1/2 transform -translate-x-1/2 bg-white shadow-lg z-50 flex-col sm:hidden w-auto p-4 rounded-lg transition-all`}
+        } absolute top-full left-1/2 transform -translate-x-1/2 bg-white shadow-lg flex-col sm:hidden w-auto p-4 rounded-lg transition-all border border-gray-200`}
       >
         <MenuItem href="/" icon="M3 10.5V19a2 2 0 002 2h14a2 2 0 002-2v-8.5M3 10.5l9-7 9 7m-9-7v5a2 2 0 01-2 2h-2a2 2 0 01-2-2v-5m4 0v5a2 2 0 002 2h2a2 2 0 002-2v-5">
           Todo

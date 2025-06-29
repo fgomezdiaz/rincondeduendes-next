@@ -72,7 +72,7 @@ export const DrowpDownMarcas = ({marcas}:Props) => {
       {isOpen && (
         <ul
           tabIndex={0}
-          className="absolute left-[-100px] md:left-0 mt-2 menu bg-base-100 rounded-box z-[1] w-[200px] p-1 shadow grid grid-cols-1 md:grid-cols-2 md:w-[350px]"
+          className="absolute left-[-100px] md:left-0 mt-2 menu bg-base-100 rounded-box z-[1] w-[200px] p-1 shadow grid grid-cols-1 md:grid-cols-2 md:w-[350px] max-h-[400px] overflow-y-auto"
         >
           {marcas.map((marca) => (
             <li className="p-0" key={marca.id}>
