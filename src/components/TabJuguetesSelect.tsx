@@ -1,6 +1,6 @@
 import { getAllMarcas } from '@/actions/marcas.actions'
 import { DrowpDownMarcas } from './drowndown/DropwDownMarcas'
-import { DropwDownCategorias } from './drowndown/DropwDownCategorias'
+//import { DropwDownCategorias } from './drowndown/DropwDownCategorias'
 import { getAllCategorias } from '@/actions/categorias.actions'
 //import { headers } from 'next/headers'
 
@@ -10,9 +10,9 @@ import { getAllCategorias } from '@/actions/categorias.actions'
     return await getAllMarcas()
   }
 
-  const categorias = async() => {
-    return await getAllCategorias()
-  }
+  // const categorias = async() => {
+  //   return await getAllCategorias()
+  // }
 
   interface Props{
     children1: React.ReactNode,
