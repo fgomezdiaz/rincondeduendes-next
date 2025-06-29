@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import NavBar from "../components/NavBar";
+import { ScrollToTopOnRouteChange } from "../components/ScrollToTopOnRouteChange";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -30,6 +31,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <ScrollToTopOnRouteChange />
         <div className="min-h-screen flex flex-col h-screen overflow-y-hidden bg-gradient-to-r from-white  via-gray-200 to-white ">
           <NavBar  />
           {children}
