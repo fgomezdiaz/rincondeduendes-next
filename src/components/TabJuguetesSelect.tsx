@@ -1,7 +1,7 @@
 import { getAllMarcas } from '@/actions/marcas.actions'
 import { DrowpDownMarcas } from './drowndown/DropwDownMarcas'
 //import { DropwDownCategorias } from './drowndown/DropwDownCategorias'
-import { getAllCategorias } from '@/actions/categorias.actions'
+//import { getAllCategorias } from '@/actions/categorias.actions'
 //import { headers } from 'next/headers'
 
 

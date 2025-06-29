@@ -19,7 +19,7 @@ export const CardArticulo = ({articulo}:Props) => {
     const onChangeImage = (imagen: string) => {
         setImgSeleccionada(imagen);
         setIndice(articulo.imagenes.indexOf(imagen));
-        // Si la imagen ya está cargada, no mostrar el estado de carga
+        // Si la imagen ya está cargada, mostrarla inmediatamente
         if (imagesLoaded[imagen]) {
             setMainImageLoaded(true);
         } else {
@@ -27,12 +27,12 @@ export const CardArticulo = ({articulo}:Props) => {
         }
     }
 
-    // Pre-cargar todas las imágenes del artículo
+    // Pre-cargar todas las imágenes del artículo de forma más agresiva
     useEffect(() => {
         const preloadImages = async () => {
             const loadPromises = articulo.imagenes.map((imagen) => {
                 return new Promise<void>((resolve) => {
-                    const img = new Image();
+                    const img = new window.Image();
                     img.onload = () => {
                         setImagesLoaded(prev => ({ ...prev, [imagen]: true }));
                         // Si es la imagen principal, marcarla como cargada
@@ -48,8 +48,8 @@ export const CardArticulo = ({articulo}:Props) => {
                         }
                         resolve();
                     };
-                    // Usar la URL completa de Cloudinary con optimizaciones
-                    img.src = `https://res.cloudinary.com/demo/image/upload/f_auto,q_auto,w_1000/${imagen}`;
+                    // Usar URL optimizada de Cloudinary con menor calidad para carga más rápida
+                    img.src = `https://res.cloudinary.com/demo/image/upload/f_auto,q_60,w_800/${imagen}`;
                 });
             });
             
@@ -61,11 +61,11 @@ export const CardArticulo = ({articulo}:Props) => {
   
     return (
         <div className="w-full max-w-80  mx-auto border border-gray-500 rounded-md flex flex-col max-h-[650px] bg-gradient-to-br from-gray-50 via-gray-100 to-gray-300 " >
-        <div className="p-0 relative" >
+        <div className="p-0 relative h-60" >
             {/* Placeholder con fondo gris claro */}
             <div 
                 className={clsx(
-                    "absolute inset-0 bg-gradient-to-br from-gray-200 to-gray-300 rounded-t-lg transition-opacity duration-300",
+                    "absolute inset-0 bg-gradient-to-br from-gray-200 to-gray-300 rounded-t-lg transition-opacity duration-300 z-10",
                     {
                         'opacity-0': mainImageLoaded,
                         'opacity-100': !mainImageLoaded
@@ -76,7 +76,7 @@ export const CardArticulo = ({articulo}:Props) => {
             <CldImage
                 id='mainImage'
                 className={clsx(
-                    "object-cover h-60 rounded-t-lg transition-opacity duration-300",
+                    "object-cover h-60 rounded-t-lg transition-opacity duration-300 absolute inset-0",
                     {
                         'opacity-100': mainImageLoaded,
                         'opacity-0': !mainImageLoaded
@@ -88,13 +88,11 @@ export const CardArticulo = ({articulo}:Props) => {
                 height={1000}
                 alt={articulo.titulo}
                 loading="eager"
-                placeholder="blur"
-                blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
                 quality={80}
+                priority={true}
                 onLoad={() => setMainImageLoaded(true)}
                 onError={() => setMainImageLoaded(true)}
             />
-        
         </div>
         <div className=" flex flex-1 p-4">
           <div id="thumbnailGallery" className="grid grid-cols-6 gap-2">
@@ -119,8 +117,6 @@ export const CardArticulo = ({articulo}:Props) => {
                   height={90}
                   className="w-full h-full object-cover"
                   loading="lazy"
-                  placeholder="blur"
-                  blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
                   quality={60}
                 />
               </button>

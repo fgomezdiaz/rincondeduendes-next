@@ -16,8 +16,8 @@ export const DrowpDownMarcas = ({marcas}:Props) => {
   const toggleDropdown = () => setIsOpen(prev => !prev);
   const closeDropdown = () => setIsOpen(false);
 
-  // Pre-cargar imagen de Cloudinary cuando se hace hover
-  const handleMarcaHover = (marca: IMarca) => {
+  // Pre-cargar imagen de Cloudinary de forma más agresiva
+  const handleMarcaInteraction = (marca: IMarca) => {
     if (!preloadedImages[marca.imagenCloudinary] && marca.imagenCloudinary) {
       const img = new window.Image();
       img.onload = () => {
@@ -26,9 +26,21 @@ export const DrowpDownMarcas = ({marcas}:Props) => {
       img.onerror = () => {
         setPreloadedImages(prev => ({ ...prev, [marca.imagenCloudinary]: true }));
       };
-      img.src = `https://res.cloudinary.com/demo/image/upload/f_auto,q_auto,w_1000/${marca.imagenCloudinary}`;
+      // Usar URL optimizada para carga más rápida
+      img.src = `https://res.cloudinary.com/demo/image/upload/f_auto,q_60,w_800/${marca.imagenCloudinary}`;
     }
   };
+
+  // Pre-cargar todas las imágenes cuando se abre el dropdown
+  useEffect(() => {
+    if (isOpen) {
+      marcas.forEach(marca => {
+        if (marca.imagenCloudinary) {
+          handleMarcaInteraction(marca);
+        }
+      });
+    }
+  }, [isOpen, marcas]);
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
@@ -60,14 +72,15 @@ export const DrowpDownMarcas = ({marcas}:Props) => {
       {isOpen && (
         <ul
           tabIndex={0}
-          className="absolute left-0 mt-2 menu bg-base-100 rounded-box z-[1] w-[200px] p-1 shadow grid grid-cols-1 md:grid-cols-2 md:w-[350px]"
+          className="absolute left-[-100px] md:left-0 mt-2 menu bg-base-100 rounded-box z-[1] w-[200px] p-1 shadow grid grid-cols-1 md:grid-cols-2 md:w-[350px]"
         >
           {marcas.map((marca) => (
             <li className="p-0" key={marca.id}>
               <Link 
                 href={`/juguetes/marca/${marca.id}`} 
                 onClick={closeDropdown}
-                onMouseEnter={() => handleMarcaHover(marca)}
+                onMouseEnter={() => handleMarcaInteraction(marca)}
+                onFocus={() => handleMarcaInteraction(marca)}
                 className="flex items-center gap-2 p-2 hover:bg-gray-50 transition-colors"
               >
                 <Image

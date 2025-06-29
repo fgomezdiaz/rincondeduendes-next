@@ -1,12 +1,14 @@
 "use client"
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import LOGO from '@/assets/images/LOGO.svg'
 
 export default function NavigationBar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const mobileMenuRef = useRef<HTMLDivElement>(null)
+  const menuButtonRef = useRef<HTMLButtonElement>(null)
 
   useEffect(() => {
     const handleResize = () => {
@@ -15,16 +17,40 @@ export default function NavigationBar() {
       }
     }
 
+    const handleClickOutside = (event: MouseEvent) => {
+      if (
+        mobileMenuRef.current && 
+        !mobileMenuRef.current.contains(event.target as Node) &&
+        menuButtonRef.current &&
+        !menuButtonRef.current.contains(event.target as Node)
+      ) {
+        setIsMobileMenuOpen(false)
+      }
+    }
+
     window.addEventListener('resize', handleResize)
-    return () => window.removeEventListener('resize', handleResize)
+    document.addEventListener('mousedown', handleClickOutside)
+    
+    return () => {
+      window.removeEventListener('resize', handleResize)
+      document.removeEventListener('mousedown', handleClickOutside)
+    }
   }, [])
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen)
   }
 
+  const closeMobileMenu = () => {
+    setIsMobileMenuOpen(false)
+  }
+
   const MenuItem = ({ href, icon, children }: { href: string, icon: string, children: React.ReactNode }) => (
-    <Link href={href} className="flex flex-row m-2 p-2 rounded-md transition-all hover:bg-gray-100">
+    <Link 
+      href={href} 
+      className="flex flex-row m-2 p-2 rounded-md transition-all hover:bg-gray-100"
+      onClick={closeMobileMenu}
+    >
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" className="w-5 h-5 mr-2">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d={icon} />
       </svg>
@@ -41,6 +67,7 @@ export default function NavigationBar() {
       </div>
 
       <button
+        ref={menuButtonRef}
         id="menu-toggle"
         className="sm:hidden p-2 focus:outline-none"
         aria-expanded={isMobileMenuOpen}
@@ -54,6 +81,7 @@ export default function NavigationBar() {
       </button>
 
       <div
+        ref={mobileMenuRef}
         id="mobile-menu"
         className={`${
           isMobileMenuOpen ? 'flex' : 'hidden'
