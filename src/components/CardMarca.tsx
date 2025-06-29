@@ -22,6 +22,8 @@ export const CardMarca = ({marca}:Props) => {
                 crop='fit'
                 alt={marca.nombre}
                 loading="eager"
+                placeholder="blur"
+                blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
                 />
                 </a>
         
@@ -34,7 +36,9 @@ export const CardMarca = ({marca}:Props) => {
                 alt={marca.nombre}
                 height={30 }
                 width={30}
-                loading="eager"
+                loading="lazy"
+                placeholder="blur"
+                blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
             />
         <div>
             <h2 className="text-xl font-semibold">{marca.nombre}</h2>
@@ -47,7 +51,7 @@ export const CardMarca = ({marca}:Props) => {
         marca.distribuidorAutorizado && 
             <div className="flex flex-row gap-2 items-center justify-start flex-1 ">
             <div className="">
-                <Image src={LOGO} alt={"Rincón de Duendes"} width={50} height={50} className='object-cover object-center' loading={'eager'} />
+                <Image src={LOGO} alt={"Rincón de Duendes"} width={50} height={50} className='object-cover object-center' loading={'lazy'} />
             </div>
 
             <div className="flex items-center justify-center bg-gray-50 p-2 rounded-md shadow-sm text-sm text-gray-600">

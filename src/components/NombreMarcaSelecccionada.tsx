@@ -28,6 +28,6 @@ export const NombreMarcaSelecccionada = () => {
         }
       }, [pathname, previousPath])
   return (
-    <div>{nombre}</div>
+    <div className="text-xl italic">{nombre}</div>
   )
 }
