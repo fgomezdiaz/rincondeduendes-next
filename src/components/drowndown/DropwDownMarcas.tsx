@@ -34,12 +34,13 @@ export const DrowpDownMarcas = ({marcas}:Props) => {
   // Pre-cargar todas las imágenes cuando se abre el dropdown
   useEffect(() => {
     if (isOpen) {
-      marcas.forEach(marca => {
-        if (marca.imagenCloudinary) {
-          handleMarcaInteraction(marca);
+      marcas.forEach((m) => {
+        if (m.imagenCloudinary) {
+          handleMarcaInteraction(m);
         }
       });
     }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isOpen, marcas]);
 
   useEffect(() => {
@@ -55,7 +56,7 @@ export const DrowpDownMarcas = ({marcas}:Props) => {
     };
   }, []);
 
-  const handleMarcaClick = (marca: IMarca) => {
+  const handleMarcaClick = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
     closeDropdown();
   };
@@ -83,7 +84,7 @@ export const DrowpDownMarcas = ({marcas}:Props) => {
             <li className="p-0" key={marca.id}>
               <Link 
                 href={`/juguetes/marca/${marca.id}`} 
-                onClick={() => handleMarcaClick(marca)}
+                onClick={handleMarcaClick}
                 onMouseEnter={() => handleMarcaInteraction(marca)}
                 onFocus={() => handleMarcaInteraction(marca)}
                 className="flex items-center gap-2 p-2 hover:bg-gray-50 transition-colors"
