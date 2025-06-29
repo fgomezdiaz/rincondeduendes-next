@@ -55,6 +55,11 @@ export const DrowpDownMarcas = ({marcas}:Props) => {
     };
   }, []);
 
+  const handleMarcaClick = (marca: IMarca) => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    closeDropdown();
+  };
+
   return (
     <div className='relative' ref={dropdownRef}>
       <button
@@ -78,7 +83,7 @@ export const DrowpDownMarcas = ({marcas}:Props) => {
             <li className="p-0" key={marca.id}>
               <Link 
                 href={`/juguetes/marca/${marca.id}`} 
-                onClick={closeDropdown}
+                onClick={() => handleMarcaClick(marca)}
                 onMouseEnter={() => handleMarcaInteraction(marca)}
                 onFocus={() => handleMarcaInteraction(marca)}
                 className="flex items-center gap-2 p-2 hover:bg-gray-50 transition-colors"
