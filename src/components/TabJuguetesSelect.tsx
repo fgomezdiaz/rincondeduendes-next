@@ -5,6 +5,7 @@ import { DrowpDownMarcas } from './drowndown/DropwDownMarcas'
 //import { getAllCategorias } from '@/actions/categorias.actions'
 //import { headers } from 'next/headers'
 import { useEffect, useState } from 'react';
+import { IMarca } from '@/interfaces/marcas.interface';
 
 
 
@@ -20,7 +21,7 @@ import { useEffect, useState } from 'react';
 
 
 export const TabJuguetesSelect = ({children1, children2}:Props) => {
-  const [marcas, setMarcas] = useState<any[]>([]);
+  const [marcas, setMarcas] = useState<IMarca[]>([]);
   useEffect(() => {
     getAllMarcas().then(setMarcas);
   }, []);
