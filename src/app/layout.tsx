@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import NavBar from "../components/NavBar";
 import { ScrollToTopOnRouteChange } from "../components/ScrollToTopOnRouteChange";
+import { Analytics } from "@vercel/analytics/next";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -36,6 +37,7 @@ export default function RootLayout({
           <NavBar  />
           <main className="flex-1 overflow-y-auto">
             {children}
+            <Analytics />
           </main>
           <footer className="w-full justify-center items-center bottom-0 text-center ">
             <div className="flex justify-center gap-1 pb-2 md:pb-4 pt-0 md:pt-4 ">
