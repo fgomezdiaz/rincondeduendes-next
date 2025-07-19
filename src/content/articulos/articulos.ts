@@ -1912,6 +1912,32 @@ export const Articulos: IArticulo[] = [
                 'makedo/makedo-discover-sistema-creativo-de-construccion-de-carton-126-piezas_j2dntj'
             ]
         },
+        { 
+            id: "156",
+            titulo: "Tabla de equilibrio de haya",
+            descripciones: ["Tabla de equilibrio de haya"],
+            precio: "94,90 €",
+            marca: 'ocamora',
+            nameMarca: 'Ocamora',
+            categoria: ["Juegos"],
+            referencias: ['TC-2220'],
+            imagenes: [
+                'ocamora/0827_Ocamora_Madera_08_FST_A_RECsRGB__25_cr7xcl'
+            ]
+        },
+        { 
+            id: "157",
+            titulo: "Avión de hojalata",
+            descripciones: ["Avión de hojalata"],
+            precio: "6,90 €",
+            marca: 'protocol',
+            nameMarca: 'Protocol',
+            categoria: ["Juegos"],
+            referencias: ['3310'],
+            imagenes: [
+                'protocol/3310_FOTO_GCART3310_jfuawz'
+            ]
+        },
 ];
 
 
