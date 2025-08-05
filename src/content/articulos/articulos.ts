@@ -1938,6 +1938,19 @@ export const Articulos: IArticulo[] = [
                 'protocol/3310_FOTO_GCART3310_jfuawz'
             ]
         },
+        { 
+            id: "158",
+            titulo: "Animal activiti grande",
+            descripciones: ["Animal activiti grande"],
+            precio: "35,90 €",
+            marca: 'lilliputiens',
+            nameMarca: 'Lilliputiens',
+            categoria: ["Juegos"],
+            referencias: ['83343'],
+            imagenes: [
+                'lilliputiens/muneco-de-actividades-ignace-lilliputiens-83343_glpvzy'
+            ]
+        },
 ];
 
 

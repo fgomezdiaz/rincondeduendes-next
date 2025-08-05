@@ -1,6 +1,29 @@
 import { IMarca } from "@/interfaces/marcas.interface";
 
 export const Marcas: IMarca[] = [
+    {   
+        "id": "grapat",
+        "nombre": "Grapat",
+        "descripcion": "Es una marca de juguetes de madera que nace de la mano de Casiana y Jordi, una pareja de artesanos que deciden crear juguetes que fomenten la creatividad y la imaginación de los más pequeños.",
+        "avatar": "avatar-grapat.png",
+        "imagenCloudinary":"marcas/imagenes/grapat_op6osf",
+        "distribuidorAutorizado": true
+    },
+    {
+        "id": "grimm",
+        "nombre": "Grimm's",
+        "descripcion": "Es una marca alemana de juguetes de madera que nace en 1978 de la mano de la familia Grimm. Sus juguetes están hechos a mano y son de madera natural, sin barnices ni tintes. ",
+        "avatar": "avatar-grimm.png",
+        "imagenCloudinary":"marcas/imagenes/grimm_olhptk",
+        "distribuidorAutorizado": true
+    },
+    {
+        "id": "lilliputiens",
+        "nombre": "Lilliputiens",
+        "descripcion": "Lilliputiens es mucho más que una marca de juguetes: es una invitación a descubrir el mundo con los ojos muy abiertos, las manos ocupadas y el corazón lleno de curiosidad. Si buscas regalos originales, estimulantes y seguros para bebés y niños pequeños, Lilliputiens es una elección que nunca falla.",
+        "avatar": "lilliputiens.jpg",
+        "imagenCloudinary":"marcas/imagenes/lilliputiens_iaajt4"
+    },
     {
         "id": "faba",
         "nombre": "Faba",
@@ -21,22 +44,6 @@ export const Marcas: IMarca[] = [
         "descripcion": "GIGI es una marca de juguetes conocida por sus bloques de construcción de gran tamaño hechos de cartón ecológico. Su objetivo es fomentar la creatividad y el juego libre en las niñas y los niños.",
         "avatar": "avatar-gigi.png",
         "imagenCloudinary":"marcas/imagenes/gigi_z6twja"
-    },
-    {   
-        "id": "grapat",
-        "nombre": "Grapat",
-        "descripcion": "Es una marca de juguetes de madera que nace de la mano de Casiana y Jordi, una pareja de artesanos que deciden crear juguetes que fomenten la creatividad y la imaginación de los más pequeños.",
-        "avatar": "avatar-grapat.png",
-        "imagenCloudinary":"marcas/imagenes/grapat_op6osf",
-        "distribuidorAutorizado": true
-    },
-    {
-        "id": "grimm",
-        "nombre": "Grimm's",
-        "descripcion": "Es una marca alemana de juguetes de madera que nace en 1978 de la mano de la familia Grimm. Sus juguetes están hechos a mano y son de madera natural, sin barnices ni tintes. ",
-        "avatar": "avatar-grimm.png",
-        "imagenCloudinary":"marcas/imagenes/grimm_olhptk",
-        "distribuidorAutorizado": true
     },
     {
         "id": "guidecraft",
@@ -114,7 +121,8 @@ export const Marcas: IMarca[] = [
         "descripcion": "Bling2O ofrece una amplia variedad de gafas de natación de diseños creativos y coloridos, que van desde temas de animales hasta estilos más sofisticados. Estos diseños no solo atraen visualmente, sino que también hacen que la experiencia de nadar sea más divertida y personalizada.",
         "avatar": "avatar-bling2o.webp",
         "imagenCloudinary":"marcas/imagenes/bling20_ujp2kn"
-    }
+    },
+
     
     
 
