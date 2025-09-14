@@ -14,6 +14,7 @@ export const CardArticulo = ({articulo}:Props) => {
     const [indice, setIndice] = useState(0);
     const [imagesLoaded, setImagesLoaded] = useState<{[key: string]: boolean}>({});
     const [mainImageLoaded, setMainImageLoaded] = useState(false);
+    const [removeBgEnabled, setRemoveBgEnabled] = useState(true);
     const pathname = usePathname();
   
     const onChangeImage = (imagen: string) => {
@@ -48,8 +49,8 @@ export const CardArticulo = ({articulo}:Props) => {
                         }
                         resolve();
                     };
-                    // Usar URL optimizada de Cloudinary con menor calidad para carga más rápida
-                    img.src = `https://res.cloudinary.com/demo/image/upload/f_auto,q_60,w_800/${imagen}`;
+                    // Usar URL optimizada de Cloudinary con degradado sutil y menor calidad para carga más rápida
+                    img.src = `https://res.cloudinary.com/didkqst3j/image/upload/e_gradient_fade:20,20,25/f_auto,q_60,w_800/${imagen}`;
                 });
             });
             
@@ -60,12 +61,13 @@ export const CardArticulo = ({articulo}:Props) => {
     }, [articulo.imagenes]);
   
     return (
-        <div className="w-full max-w-80  mx-auto border border-gray-500 rounded-md flex flex-col max-h-[650px] bg-gradient-to-br from-gray-50 via-gray-100 to-gray-300 " >
-        <div className="p-0 relative h-60" >
+        <div className="w-full max-w-80  mx-auto border border-gray-500 rounded-md flex flex-col max-h-[650px] bg-gradient-to-br from-slate-100 via-slate-200 to-slate-300 " >
+        <div className="p-0 relative h-60 overflow-hidden rounded-t-lg flex items-center justify-center" 
+             style={{ WebkitMaskImage: 'linear-gradient(to bottom, black 92%, transparent 100%)', maskImage: 'linear-gradient(to bottom, black 92%, transparent 100%)' }}>
             {/* Placeholder con fondo gris claro */}
             <div 
                 className={clsx(
-                    "absolute inset-0 bg-gradient-to-br from-gray-200 to-gray-300 rounded-t-lg transition-opacity duration-300 z-10",
+                    "absolute inset-0 bg-gray-100 rounded-t-lg transition-opacity duration-300 z-10",
                     {
                         'opacity-0': mainImageLoaded,
                         'opacity-100': !mainImageLoaded
@@ -76,23 +78,35 @@ export const CardArticulo = ({articulo}:Props) => {
             <CldImage
                 id='mainImage'
                 className={clsx(
-                    "object-cover h-60 rounded-t-lg transition-opacity duration-300 absolute inset-0",
+                    "transition-opacity duration-300 w-full h-full object-contain relative z-0",
                     {
                         'opacity-100': mainImageLoaded,
                         'opacity-0': !mainImageLoaded
                     }
                 )}
+                key={`${imgSeleccionada}-${removeBgEnabled ? 'rb' : 'no'}`}
                 src={imgSeleccionada || ''}
-                width={1000}
-                crop={'fit'}
-                height={1000}
+                width={400}
+                height={240}
+                crop='fit'
+                quality={90}
                 alt={articulo.titulo}
                 loading="eager"
-                quality={80}
                 priority={true}
+                removeBackground={removeBgEnabled}
                 onLoad={() => setMainImageLoaded(true)}
-                onError={() => setMainImageLoaded(true)}
+                onError={() => {
+                    // Si la cuenta no permite background removal, desactivar y reintentar sin esa transformación
+                    if (removeBgEnabled) {
+                        setRemoveBgEnabled(false);
+                    }
+                    setMainImageLoaded(true);
+                }}
             />
+            {/* Línea horizontal sutil al final de la cabecera (ligeramente arriba para evitar la máscara) */}
+            <div className="pointer-events-none absolute bottom-[4px] left-4 right-4 h-px bg-gradient-to-r from-transparent via-slate-600/45 to-transparent" />
+            {/* Resplandor muy sutil, mismo ancho que la línea */}
+            <div className="pointer-events-none absolute bottom-[1px] left-4 right-4 h-[4px] bg-gradient-to-r from-transparent via-slate-500/40 to-transparent blur-[1px]" />
         </div>
         <div className=" flex flex-1 p-4">
           <div id="thumbnailGallery" className="grid grid-cols-6 gap-2">
@@ -101,7 +115,7 @@ export const CardArticulo = ({articulo}:Props) => {
                 key={index} 
                 onClick={onChangeImage.bind(null, imagen)}
                 className={
-                    clsx('thumbnail relative aspect-square rounded-md overflow-hidden transition-all duration-200',
+                    clsx('thumbnail relative aspect-square rounded-md overflow-hidden transition-all duration-200 bg-gradient-to-br from-gray-50 to-gray-100',
                         {
                             'ring-2 ring-primary ring-offset-2': indice === index,
                             'opacity-100': imagesLoaded[imagen],
@@ -113,11 +127,12 @@ export const CardArticulo = ({articulo}:Props) => {
                 <CldImage
                   src={imagen}
                   alt={`Thumbnail ${index + 1}`}
-                  width={90}
-                  height={90}
-                  className="w-full h-full object-cover"
+                  width={100}
+                  height={100}
+                  className="w-full h-full object-cover relative z-0"
                   loading="lazy"
-                  quality={60}
+                  quality={30}
+                  sizes="(max-width: 640px) 20vw, 10vw"
                 />
               </button>
             ))}
