@@ -12,10 +12,10 @@ export const CardMarca = ({marca}:Props) => {
 
   return (
     <div className="w-full max-w-md mx-auto border rounded-md flex flex-col shadow-sm border-gray-500 ">
-        <div className="p-0 bg-gradient-to-br from-gray-50 to-gray-100">
+        <div className="p-0">
                 <a href={`/juguetes/marca/${marca.id}`}>
                 <CldImage
-                className="object-contain w-full h-48 rounded-t-lg  "
+                className="object-cover w-full h-48 rounded-t-lg  "
                 src={marca.imagenCloudinary || ''}
                 width={1000}
                 height={1000}

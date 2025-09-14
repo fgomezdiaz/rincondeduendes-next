@@ -49,7 +49,7 @@ export const CardArticulo = ({articulo}:Props) => {
                         resolve();
                     };
                     // Usar URL optimizada de Cloudinary con menor calidad para carga más rápida
-                    img.src = `https://res.cloudinary.com/didkqst3j/image/upload/f_auto,q_60,w_800/${imagen}`;
+                    img.src = `https://res.cloudinary.com/demo/image/upload/f_auto,q_60,w_800/${imagen}`;
                 });
             });
             
@@ -61,7 +61,7 @@ export const CardArticulo = ({articulo}:Props) => {
   
     return (
         <div className="w-full max-w-80  mx-auto border border-gray-500 rounded-md flex flex-col max-h-[650px] bg-gradient-to-br from-gray-50 via-gray-100 to-gray-300 " >
-        <div className="p-0 relative h-60 bg-white flex items-center justify-center" >
+        <div className="p-0 relative h-60" >
             {/* Placeholder con fondo gris claro */}
             <div 
                 className={clsx(
@@ -76,21 +76,19 @@ export const CardArticulo = ({articulo}:Props) => {
             <CldImage
                 id='mainImage'
                 className={clsx(
-                    "transition-opacity duration-300 max-h-full max-w-full",
+                    "object-cover h-60 rounded-t-lg transition-opacity duration-300 absolute inset-0",
                     {
                         'opacity-100': mainImageLoaded,
                         'opacity-0': !mainImageLoaded
                     }
                 )}
                 src={imgSeleccionada || ''}
-                width={400}
-                height={240}
-                crop={{
-                    type: 'fit'
-                }}
-                quality={85}
+                width={1000}
+                crop={'fit'}
+                height={1000}
                 alt={articulo.titulo}
                 loading="eager"
+                quality={80}
                 priority={true}
                 onLoad={() => setMainImageLoaded(true)}
                 onError={() => setMainImageLoaded(true)}
@@ -103,7 +101,7 @@ export const CardArticulo = ({articulo}:Props) => {
                 key={index} 
                 onClick={onChangeImage.bind(null, imagen)}
                 className={
-                    clsx('thumbnail relative aspect-square rounded-md overflow-hidden transition-all duration-200 bg-gradient-to-br from-gray-50 to-gray-100',
+                    clsx('thumbnail relative aspect-square rounded-md overflow-hidden transition-all duration-200',
                         {
                             'ring-2 ring-primary ring-offset-2': indice === index,
                             'opacity-100': imagesLoaded[imagen],
@@ -117,7 +115,7 @@ export const CardArticulo = ({articulo}:Props) => {
                   alt={`Thumbnail ${index + 1}`}
                   width={90}
                   height={90}
-                  className="w-full h-full object-contain"
+                  className="w-full h-full object-cover"
                   loading="lazy"
                   quality={60}
                 />
