@@ -1940,8 +1940,8 @@ export const Articulos: IArticulo[] = [
         },
         { 
             id: "158",
-            titulo: "Animal activiti grande",
-            descripciones: ["Animal activiti grande"],
+            titulo: "Muñeco de actividades Ignace",
+            descripciones: ["Muñeco de actividades Ignace"],
             precio: "35,90 €",
             marca: 'lilliputiens',
             nameMarca: 'Lilliputiens',
@@ -1949,6 +1949,162 @@ export const Articulos: IArticulo[] = [
             referencias: ['83343'],
             imagenes: [
                 'lilliputiens/muneco-de-actividades-ignace-lilliputiens-83343_glpvzy'
+            ]
+        },
+        { 
+            id: "159",
+            titulo: "Peluche musical",
+            descripciones: ["Peluche musical"],
+            precio: "35,50 €",
+            marca: 'lilliputiens',
+            nameMarca: 'Lilliputiens',
+            categoria: ["Juegos"],
+            referencias: ['83230'],
+            imagenes: [
+                'lilliputiens/peluche-musical-rosalie-lilliputiens-83230_ubptzq'
+            ]
+        },
+        { 
+            id: "160",
+            titulo: "Mi primer juego de bolos la granja",
+            descripciones: ["Mi primer juego de bolos la granja"],
+            precio: "41,90 €",
+            marca: 'lilliputiens',
+            nameMarca: 'Lilliputiens',
+            categoria: ["Juegos"],
+            referencias: ['83159'],
+            imagenes: [
+                'lilliputiens/Mi-primer-juego-de-bolos-la-granja_sqlp9k'
+            ]
+        },
+        { 
+            id: "161",
+            titulo: "Juguete con pito",
+            descripciones: ["Juguete con pito - Ignace", "Juguete con pito - Alice"],
+            precio: "10,50 €",
+            marca: 'lilliputiens',
+            nameMarca: 'Lilliputiens',
+            categoria: ["Juegos"],
+            referencias: ['83256', '83258'],
+            imagenes: [
+                'lilliputiens/juguete-con-pito-ignace_i2ocb2', 'lilliputiens/juguete-con-pito-alice_vknwaq'
+            ]
+        },
+        { 
+            id: "162",
+            titulo: "Casa de aprendizaje de cierres",
+            descripciones: ["Casa de aprendizaje de cierres"],
+            precio: "46,90 €",
+            marca: 'lilliputiens',
+            nameMarca: 'Lilliputiens',
+            categoria: ["Juegos"],
+            referencias: ['83263'],
+            imagenes: [
+                'lilliputiens/casa-de-aprendizaje-de-cierres_lv9pr0'
+            ]
+        },
+        { 
+            id: "163",
+            titulo: "Buenos días pequeña vulpina",
+            descripciones: ["Libro didáctico - Buenos días pequeña vulpina", "Libro didáctico - Buenas noches pequeña vulpina"],
+            precio: "43,50 €",
+            marca: 'lilliputiens',
+            nameMarca: 'Lilliputiens',
+            categoria: ["Juegos"],
+            referencias: ['83270', '83271'],
+            imagenes: [
+                'lilliputiens/libro-didactico-buenos-dias-pequena-vulpina_ajjeub', 'lilliputiens/libro-didactico-buenas-noches-pequena-vulpina_mmtt8l'
+            ]
+        },
+        { 
+            id: "164",
+            titulo: "Sonajero de pulsera Alice",
+            descripciones: ["Sonajero de pulsera Alice"],
+            precio: "10,50 €",
+            marca: 'lilliputiens',
+            nameMarca: 'Lilliputiens',
+            categoria: ["Juegos"],
+            referencias: ['83281'],
+            imagenes: [
+                'lilliputiens/sonajero-de-pulsera-alice_ytejic'
+            ]
+        },
+        { 
+            id: "165",
+            titulo: "Bebe Lena",
+            descripciones: ["Bebe Lena"],
+            precio: "47,50 €",
+            marca: 'lilliputiens',
+            nameMarca: 'Lilliputiens',
+            categoria: ["Juegos"],
+            referencias: ['83375'],
+            imagenes: [
+                'lilliputiens/bebe-lena_xrps0p'
+            ]
+        },
+        { 
+            id: "166",
+            titulo: "Marioneta reversible Caperucita",
+            descripciones: ["Marioneta reversible Caperucita"],
+            precio: "35,90 €",
+            marca: 'lilliputiens',
+            nameMarca: 'Lilliputiens',
+            categoria: ["Juegos"],
+            referencias: ['83411'],
+            imagenes: [
+                'lilliputiens/marioneta-para-contar-cuentos-reversible-caperucita-roja_zbyclk'
+            ]
+        },
+        { 
+            id: "167",
+            titulo: "Ignace al galope, burrito sonoro",
+            descripciones: ["Ignace al galope, burrito sonoro"],
+            precio: "29,99 €",
+            marca: 'lilliputiens',
+            nameMarca: 'Lilliputiens',
+            categoria: ["Juegos"],
+            referencias: ['33021'],
+            imagenes: [
+                'lilliputiens/ignace-al-galope-burrito-sonoro_kso9jh'
+            ]
+        },
+        { 
+            id: "168",
+            titulo: "Mi primera caja de música animada",
+            descripciones: ["Mi primera caja de música animada"],
+            precio: "35,95 €",
+            marca: 'lilliputiens',
+            nameMarca: 'Lilliputiens',
+            categoria: ["Juegos"],
+            referencias: ['83452'],
+            imagenes: [
+                'lilliputiens/mi-primera-caja-de-musica-animada_gwz6mj.jpg'
+            ]
+        },
+        { 
+            id: "169",
+            titulo: "Pelota león Jack",
+            descripciones: ["Pelota león Jack"],
+            precio: "15,50 €",
+            marca: 'lilliputiens',
+            nameMarca: 'Lilliputiens',
+            categoria: ["Juegos"],
+            referencias: ['83476'],
+            imagenes: [
+                'lilliputiens/pelota-leon-jack_m9ak4f'
+            ]
+        },
+        { 
+            id: "170",
+            titulo: "Las casas del lobo y los 3 cerditos",
+            descripciones: ["Las casas del lobo y los 3 cerditos"],
+            precio: "54,50 €",
+            marca: 'lilliputiens',
+            nameMarca: 'Lilliputiens',
+            categoria: ["Juegos"],
+            referencias: ['83490'],
+            imagenes: [
+                'lilliputiens/las-casas-del-lobo-y-los-3-cerditos_fqct4l'
             ]
         },
 ];

@@ -17,6 +17,7 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://rincondeduendes.com'),
   title: {
     default: "Rincón de Duendes - Juguetería y Librería Infantil",
     template: "%s | Rincón de Duendes"

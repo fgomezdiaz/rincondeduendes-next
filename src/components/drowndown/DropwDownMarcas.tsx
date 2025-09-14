@@ -27,7 +27,7 @@ export const DrowpDownMarcas = ({marcas}:Props) => {
         setPreloadedImages(prev => ({ ...prev, [marca.imagenCloudinary]: true }));
       };
       // Usar URL optimizada para carga más rápida
-      img.src = `https://res.cloudinary.com/demo/image/upload/f_auto,q_60,w_800/${marca.imagenCloudinary}`;
+      img.src = `https://res.cloudinary.com/didkqst3j/image/upload/f_auto,q_60,w_800/${marca.imagenCloudinary}`;
     }
   };
 

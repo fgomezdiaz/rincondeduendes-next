@@ -13,7 +13,7 @@ export const PreloadImages = ({ articulos }: Props) => {
         
         allImages.forEach((imagen) => {
             const img = new window.Image();
-            img.src = `https://res.cloudinary.com/demo/image/upload/f_auto,q_60,w_800/${imagen}`;
+            img.src = `https://res.cloudinary.com/didkqst3j/image/upload/f_auto,q_60,w_800/${imagen}`;
         });
     }, [articulos]);
 
