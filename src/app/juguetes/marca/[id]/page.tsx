@@ -2,6 +2,9 @@ import { getArticulosByMarca } from "@/actions/articulos.actions";
 import { getAllMarcas } from "@/actions/marcas.actions";
 import { CardArticulo } from "@/components/CardArticulo";
 
+export const dynamic = 'force-static';
+export const revalidate = 86400; // re-generate once a day
+
 export async function generateStaticParams() {
     const marcas = await getAllMarcas();
     return marcas.map(marca => ({ id: marca.id } ));

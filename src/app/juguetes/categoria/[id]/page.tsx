@@ -1,12 +1,15 @@
 
-import { getArticulosByCategoria } from "@/actions/categorias.actions";
-import { getAllMarcas } from "@/actions/marcas.actions";
+import { getArticulosByCategoria, getAllCategorias } from "@/actions/categorias.actions";
 import { CardArticulo } from "@/components/CardArticulo";
 import { TCategoria } from "@/interfaces/categorias.interface";
 
+export const dynamic = 'force-static';
+export const revalidate = 86400; // re-generate once a day
+
 export async function generateStaticParams() {
-    const marcas = await getAllMarcas();
-    return marcas.map(marca => ({ id: marca.id } ));
+    const categorias = await getAllCategorias();
+    // Los paths se generan por nombre, ya que el filtro usa TCategoria (nombre)
+    return categorias.map(categoria => ({ id: categoria.nombre } ));
 }
 
 const getArticulos = async (id: string) => { 
