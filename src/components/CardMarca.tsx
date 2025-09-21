@@ -1,6 +1,5 @@
 'use client'
 import { IMarca } from "@/interfaces/marcas.interface"
-import { CldImage } from "next-cloudinary"
 import Image from "next/image"
 import LOGO from '../assets/images/LOGO2.png'
 interface Props{
@@ -11,24 +10,25 @@ interface Props{
 export const CardMarca = ({marca}:Props) => {
 
   return (
-    <div className="w-full max-w-md mx-auto border rounded-md flex flex-col shadow-sm border-gray-500 ">
+    <div className="w-full max-w-md mx-auto border rounded-md flex flex-col shadow-sm border-gray-300 bg-white">
         <div className="p-0">
                 <a href={`/juguetes/marca/${marca.id}`}>
-                <CldImage
-                className="object-cover w-full h-48 rounded-t-lg  "
-                src={marca.imagenCloudinary || ''}
-                width={1000}
-                height={1000}
-                crop='fit'
-                alt={marca.nombre}
-                loading="eager"
-                placeholder="blur"
-                blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
-                />
+                <div className="relative w-full aspect-[4/3] rounded-t-lg overflow-hidden bg-white">
+                  <Image
+                    className="object-cover"
+                    src={`https://res.cloudinary.com/didkqst3j/image/upload/${marca.imagenCloudinary || ''}`}
+                    alt={marca.nombre}
+                    loading="eager"
+                    placeholder="blur"
+                    blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
+                    fill
+                    sizes="(max-width: 768px) 100vw, 600px"
+                  />
+                </div>
                 </a>
         
         </div>
-    <div className=" flex flex-1 p-4">
+    <div className=" flex flex-1 p-4 bg-white">
         <div className="flex items-start space-x-4">
         <Image
                 className="object-cover h-10 w-10 rounded-full"

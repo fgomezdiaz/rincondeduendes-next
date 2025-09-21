@@ -1,7 +1,7 @@
 'use client'
 import { IArticulo } from '@/interfaces/articulos.interface'
 import { useState, useEffect } from 'react';
-import { CldImage } from 'next-cloudinary';
+import Image from 'next/image';
 import clsx from 'clsx';
 import { usePathname } from 'next/navigation';
 
@@ -14,7 +14,7 @@ export const CardArticulo = ({articulo}:Props) => {
     const [indice, setIndice] = useState(0);
     const [imagesLoaded, setImagesLoaded] = useState<{[key: string]: boolean}>({});
     const [mainImageLoaded, setMainImageLoaded] = useState(false);
-    const [removeBgEnabled, setRemoveBgEnabled] = useState(true);
+    // Eliminado background removal para no consumir add-on de Cloudinary
     const pathname = usePathname();
   
     const onChangeImage = (imagen: string) => {
@@ -28,7 +28,7 @@ export const CardArticulo = ({articulo}:Props) => {
         }
     }
 
-    // Pre-cargar todas las imágenes del artículo de forma más agresiva
+    // Pre-cargar imágenes sin transformaciones de Cloudinary
     useEffect(() => {
         const preloadImages = async () => {
             const loadPromises = articulo.imagenes.map((imagen) => {
@@ -49,8 +49,8 @@ export const CardArticulo = ({articulo}:Props) => {
                         }
                         resolve();
                     };
-                    // Usar URL optimizada de Cloudinary con degradado sutil y menor calidad para carga más rápida
-                    img.src = `https://res.cloudinary.com/didkqst3j/image/upload/e_gradient_fade:20,20,25/f_auto,q_60,w_800/${imagen}`;
+                    // Usar URL directa sin transformaciones
+                    img.src = `https://res.cloudinary.com/didkqst3j/image/upload/${imagen}`;
                 });
             });
             
@@ -61,13 +61,13 @@ export const CardArticulo = ({articulo}:Props) => {
     }, [articulo.imagenes]);
   
     return (
-        <div className="w-full max-w-80  mx-auto border border-gray-500 rounded-md flex flex-col max-h-[650px] bg-gradient-to-br from-slate-100 via-slate-200 to-slate-300 " >
-        <div className="p-0 relative h-60 overflow-hidden rounded-t-lg flex items-center justify-center" 
+        <div className="w-full max-w-80  mx-auto border border-gray-300 rounded-md flex flex-col max-h-[650px] bg-white" >
+        <div className="p-0 relative h-60 overflow-hidden rounded-t-lg flex items-center justify-center bg-white" 
              style={{ WebkitMaskImage: 'linear-gradient(to bottom, black 92%, transparent 100%)', maskImage: 'linear-gradient(to bottom, black 92%, transparent 100%)' }}>
             {/* Placeholder con fondo gris claro */}
             <div 
                 className={clsx(
-                    "absolute inset-0 bg-gray-100 rounded-t-lg transition-opacity duration-300 z-10",
+                    "absolute inset-0 bg-white rounded-t-lg transition-opacity duration-300 z-10",
                     {
                         'opacity-0': mainImageLoaded,
                         'opacity-100': !mainImageLoaded
@@ -75,33 +75,24 @@ export const CardArticulo = ({articulo}:Props) => {
                 )}
             />
             
-            <CldImage
+            <Image
                 id='mainImage'
                 className={clsx(
-                    "transition-opacity duration-300 w-full h-full object-contain relative z-0",
+                    "transition-opacity duration-300 w-full h-full object-cover relative z-0",
                     {
                         'opacity-100': mainImageLoaded,
                         'opacity-0': !mainImageLoaded
                     }
                 )}
-                key={`${imgSeleccionada}-${removeBgEnabled ? 'rb' : 'no'}`}
-                src={imgSeleccionada || ''}
+                key={`${imgSeleccionada}-no-transform`}
+                src={`https://res.cloudinary.com/didkqst3j/image/upload/${imgSeleccionada || ''}`}
                 width={400}
                 height={240}
-                crop='fit'
-                quality={90}
                 alt={articulo.titulo}
                 loading="eager"
                 priority={true}
-                removeBackground={removeBgEnabled}
                 onLoad={() => setMainImageLoaded(true)}
-                onError={() => {
-                    // Si la cuenta no permite background removal, desactivar y reintentar sin esa transformación
-                    if (removeBgEnabled) {
-                        setRemoveBgEnabled(false);
-                    }
-                    setMainImageLoaded(true);
-                }}
+                onError={() => setMainImageLoaded(true)}
             />
             {/* Línea horizontal sutil al final de la cabecera (ligeramente arriba para evitar la máscara) */}
             <div className="pointer-events-none absolute bottom-[4px] left-4 right-4 h-px bg-gradient-to-r from-transparent via-slate-600/45 to-transparent" />
@@ -115,7 +106,7 @@ export const CardArticulo = ({articulo}:Props) => {
                 key={index} 
                 onClick={onChangeImage.bind(null, imagen)}
                 className={
-                    clsx('thumbnail relative aspect-square rounded-md overflow-hidden transition-all duration-200 bg-gradient-to-br from-gray-50 to-gray-100',
+                    clsx('thumbnail relative aspect-square rounded-md overflow-hidden transition-all duration-200 bg-white',
                         {
                             'ring-2 ring-primary ring-offset-2': indice === index,
                             'opacity-100': imagesLoaded[imagen],
@@ -124,14 +115,13 @@ export const CardArticulo = ({articulo}:Props) => {
                     )
                 }
               >
-                <CldImage
-                  src={imagen}
+                <Image
+                  src={`https://res.cloudinary.com/didkqst3j/image/upload/${imagen}`}
                   alt={`Thumbnail ${index + 1}`}
                   width={100}
                   height={100}
                   className="w-full h-full object-cover relative z-0"
                   loading="lazy"
-                  quality={30}
                   sizes="(max-width: 640px) 20vw, 10vw"
                 />
               </button>

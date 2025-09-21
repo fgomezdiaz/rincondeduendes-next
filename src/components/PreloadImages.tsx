@@ -8,12 +8,13 @@ interface Props {
 
 export const PreloadImages = ({ articulos }: Props) => {
     useEffect(() => {
-        // Pre-cargar todas las imágenes de todos los artículos inmediatamente
-        const allImages = articulos.flatMap(articulo => articulo.imagenes);
-        
-        allImages.forEach((imagen) => {
+        // Pre-cargar imágenes sin transformaciones de Cloudinary (limitado)
+        const allImages = Array.from(new Set(articulos.flatMap(articulo => articulo.imagenes)));
+        const imagesToPreload = allImages.slice(0, 8);
+
+        imagesToPreload.forEach((imagen) => {
             const img = new window.Image();
-            img.src = `https://res.cloudinary.com/demo/image/upload/f_auto,q_60,w_800/${imagen}`;
+            img.src = `https://res.cloudinary.com/didkqst3j/image/upload/${imagen}`;
         });
     }, [articulos]);
 

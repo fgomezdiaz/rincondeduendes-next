@@ -16,7 +16,7 @@ export const DrowpDownMarcas = ({marcas}:Props) => {
   const toggleDropdown = () => setIsOpen(prev => !prev);
   const closeDropdown = () => setIsOpen(false);
 
-  // Pre-cargar imagen de Cloudinary de forma más agresiva
+  // Pre-cargar imagen de Cloudinary sin transformaciones
   const handleMarcaInteraction = (marca: IMarca) => {
     if (!preloadedImages[marca.imagenCloudinary] && marca.imagenCloudinary) {
       const img = new window.Image();
@@ -26,8 +26,8 @@ export const DrowpDownMarcas = ({marcas}:Props) => {
       img.onerror = () => {
         setPreloadedImages(prev => ({ ...prev, [marca.imagenCloudinary]: true }));
       };
-      // Usar URL optimizada para carga más rápida
-      img.src = `https://res.cloudinary.com/demo/image/upload/f_auto,q_60,w_800/${marca.imagenCloudinary}`;
+      // Usar entrega directa sin transformaciones
+      img.src = `https://res.cloudinary.com/didkqst3j/image/upload/${marca.imagenCloudinary}`;
     }
   };
 
