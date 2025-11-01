@@ -1,9 +1,6 @@
 import { getAllMarcas } from "@/actions/marcas.actions";
 import { CardMarca } from "@/components/CardMarca";
 
-// Static generation for fast loads
-export const dynamic = 'force-static';
-export const revalidate = 86400; // re-generate once a day
 
 
 const getMarcas = async() => {

@@ -4,6 +4,7 @@ import "./globals.css";
 import NavBar from "../components/NavBar";
 import { ScrollToTopOnRouteChange } from "../components/ScrollToTopOnRouteChange";
 import { Analytics } from "@vercel/analytics/next";
+import { Suspense } from "react";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -202,7 +203,9 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <ScrollToTopOnRouteChange />
+        <Suspense fallback={<div>Loading...</div>}>
+          <ScrollToTopOnRouteChange />
+        </Suspense>
         <div className="min-h-screen max-h-screen flex flex-col bg-gradient-to-r from-white via-gray-200 to-white">
           <NavBar  />
           <main className="flex-1 overflow-y-auto">

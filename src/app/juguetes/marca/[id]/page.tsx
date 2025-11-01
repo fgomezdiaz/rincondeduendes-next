@@ -1,14 +1,6 @@
 import { getArticulosByMarca } from "@/actions/articulos.actions";
-import { getAllMarcas } from "@/actions/marcas.actions";
 import { CardArticulo } from "@/components/CardArticulo";
 
-export const dynamic = 'force-static';
-export const revalidate = 86400; // re-generate once a day
-
-export async function generateStaticParams() {
-    const marcas = await getAllMarcas();
-    return marcas.map(marca => ({ id: marca.id } ));
-}
 
 const getArticulos = async (id: string) => { 
     return await getArticulosByMarca(id);
@@ -21,6 +13,7 @@ interface Props {
   }
 
 export default async function ArticuloByMarcaPage({ params }: Props) {
+    'use cache: remote'
     const id =  (await params).id;
     const articulos = await getArticulos(id);
     
