@@ -1,6 +1,6 @@
 'use client'
 import { IArticulo } from '@/interfaces/articulos.interface'
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import Image from 'next/image';
 import clsx from 'clsx';
 import { usePathname } from 'next/navigation';
@@ -9,17 +9,23 @@ interface Props{
     articulo: IArticulo
 }
 
+/**
+ * Componente de tarjeta de artículo con galería interactiva de imágenes
+ * Debe ser Client Component porque requiere:
+ * - Interactividad (cambio de imágenes con onClick)
+ * - Estado local (imagen seleccionada, índice)
+ * - Detección de ruta (usePathname)
+ */
 export const CardArticulo = ({articulo}:Props) => {
     const [imgSeleccionada, setImgSeleccionada] = useState(articulo.imagenes[0]);
     const [indice, setIndice] = useState(0);
     const [imagesLoaded, setImagesLoaded] = useState<{[key: string]: boolean}>({});
     const [mainImageLoaded, setMainImageLoaded] = useState(false);
-    // Eliminado background removal para no consumir add-on de Cloudinary
     const pathname = usePathname();
   
-    const onChangeImage = (imagen: string) => {
+    const onChangeImage = (imagen: string, imagenIndex: number) => {
         setImgSeleccionada(imagen);
-        setIndice(articulo.imagenes.indexOf(imagen));
+        setIndice(imagenIndex);
         // Si la imagen ya está cargada, mostrarla inmediatamente
         if (imagesLoaded[imagen]) {
             setMainImageLoaded(true);
@@ -28,37 +34,6 @@ export const CardArticulo = ({articulo}:Props) => {
         }
     }
 
-    // Pre-cargar imágenes sin transformaciones de Cloudinary
-    useEffect(() => {
-        const preloadImages = async () => {
-            const loadPromises = articulo.imagenes.map((imagen) => {
-                return new Promise<void>((resolve) => {
-                    const img = new window.Image();
-                    img.onload = () => {
-                        setImagesLoaded(prev => ({ ...prev, [imagen]: true }));
-                        // Si es la imagen principal, marcarla como cargada
-                        if (imagen === articulo.imagenes[0]) {
-                            setMainImageLoaded(true);
-                        }
-                        resolve();
-                    };
-                    img.onerror = () => {
-                        setImagesLoaded(prev => ({ ...prev, [imagen]: true }));
-                        if (imagen === articulo.imagenes[0]) {
-                            setMainImageLoaded(true);
-                        }
-                        resolve();
-                    };
-                    // Usar URL directa sin transformaciones
-                    img.src = `https://res.cloudinary.com/didkqst3j/image/upload/${imagen}`;
-                });
-            });
-            
-            await Promise.all(loadPromises);
-        };
-
-        preloadImages();
-    }, [articulo.imagenes]);
   
     return (
         <div className="w-full max-w-80  mx-auto border border-gray-300 rounded-md flex flex-col max-h-[650px] bg-white" >
@@ -103,8 +78,8 @@ export const CardArticulo = ({articulo}:Props) => {
           <div id="thumbnailGallery" className="grid grid-cols-6 gap-2">
             {articulo.imagenes.map((imagen, index) => (
               <button 
-                key={index} 
-                onClick={onChangeImage.bind(null, imagen)}
+                key={`${articulo.id}-img-${index}`}
+                onClick={() => onChangeImage(imagen, index)}
                 className={
                     clsx('thumbnail relative aspect-square rounded-md overflow-hidden transition-all duration-200 bg-white',
                         {
@@ -114,15 +89,17 @@ export const CardArticulo = ({articulo}:Props) => {
                         }
                     )
                 }
+                aria-label={`Ver imagen ${index + 1} de ${articulo.titulo}`}
               >
                 <Image
                   src={`https://res.cloudinary.com/didkqst3j/image/upload/${imagen}`}
-                  alt={`Thumbnail ${index + 1}`}
+                  alt={`Thumbnail ${index + 1} de ${articulo.titulo}`}
                   width={100}
                   height={100}
                   className="w-full h-full object-cover relative z-0"
                   loading="lazy"
                   sizes="(max-width: 640px) 20vw, 10vw"
+                  onLoad={() => setImagesLoaded(prev => ({ ...prev, [imagen]: true }))}
                 />
               </button>
             ))}

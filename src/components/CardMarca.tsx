@@ -1,18 +1,24 @@
-'use client'
 import { IMarca } from "@/interfaces/marcas.interface"
 import Image from "next/image"
+import Link from "next/link"
 import LOGO from '../assets/images/LOGO2.png'
+
 interface Props{
     marca: IMarca
 }
 
-
+/**
+ * Componente estático (Server Component) para mostrar una marca
+ * - No usa 'use client' porque no necesita interactividad
+ * - Se renderiza en el servidor, mejor para SEO
+ * - Optimizado para páginas estáticas
+ */
 export const CardMarca = ({marca}:Props) => {
 
   return (
     <div className="w-full max-w-md mx-auto border rounded-md flex flex-col shadow-sm border-gray-300 bg-white">
         <div className="p-0">
-                <a href={`/juguetes/marca/${marca.id}`}>
+                <Link href={`/juguetes/marca/${marca.id}`}>
                 <div className="relative w-full aspect-[4/3] rounded-t-lg overflow-hidden bg-white">
                   <Image
                     className="object-cover"
@@ -25,7 +31,7 @@ export const CardMarca = ({marca}:Props) => {
                     sizes="(max-width: 768px) 100vw, 600px"
                   />
                 </div>
-                </a>
+                </Link>
         
         </div>
     <div className=" flex flex-1 p-4 bg-white">
